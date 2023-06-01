@@ -1,0 +1,265 @@
+[gd_scene load_steps=10 format=3 uid="uid://cdq4hp8cq3eb3"]
+
+[ext_resource type="Texture2D" uid="uid://dikgd4nmop48s" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Creditos/Menu_Creditos.png" id="1_m1xu2"]
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Creditos/Creditos.gd" id="1_t242w"]
+[ext_resource type="Texture2D" uid="uid://cpihxcmeiuhr4" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Creditos/Yo.png" id="2_u5xe0"]
+[ext_resource type="FontFile" uid="uid://co61opcls3s22" path="res://Archivos/Documentos/Fuentes/Gelio Pasteli.ttf" id="3_7lot7"]
+
+[sub_resource type="Gradient" id="Gradient_smsjd"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kmv7f"]
+gradient = SubResource("Gradient_smsjd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_80ddt"]
+texture = SubResource("GradientTexture1D_kmv7f")
+
+[sub_resource type="Animation" id="Animation_2plje"]
+resource_name = "Agradecimiento"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Creditos:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Creditos:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Agradecimientos:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4, 5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Agradecimientos:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(10),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Menu_Principal"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aiule"]
+_data = {
+"Agradecimiento": SubResource("Animation_2plje")
+}
+
+[node name="Creditos" type="CanvasLayer"]
+script = ExtResource("1_t242w")
+metadata/_edit_vertical_guides_ = [240.243, 80.1041]
+metadata/_edit_horizontal_guides_ = [247.056]
+
+[node name="Fondo_Negro" type="Panel" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_right = 320.0
+offset_bottom = 179.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_80ddt")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_right = 320.0
+offset_bottom = 179.0
+
+[node name="Fondo" type="TextureRect" parent="."]
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("1_m1xu2")
+
+[node name="Creditos" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Progamacion" type="Label" parent="Creditos"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 111.0
+offset_right = 240.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(0.937255, 0.721569, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("3_7lot7")
+theme_override_font_sizes/font_size = 10
+text = "MC_4"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Yo" type="Label" parent="Creditos/Progamacion"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 14.0
+offset_right = 78.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.864675, 0.864675, 0.864675, 1)
+theme_override_fonts/font = ExtResource("3_7lot7")
+theme_override_font_sizes/font_size = 7
+text = "Yeferson Jaramillo"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Diseño" type="Label" parent="Creditos"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 139.0
+offset_right = 133.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0.937255, 0.721569, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("3_7lot7")
+theme_override_font_sizes/font_size = 10
+text = "MC_2"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Yo" type="Label" parent="Creditos/Diseño"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 14.0
+offset_right = 52.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.864675, 0.864675, 0.864675, 1)
+theme_override_fonts/font = ExtResource("3_7lot7")
+theme_override_font_sizes/font_size = 7
+text = "Yeferson Jaramillo"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Arte" type="Label" parent="Creditos"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 139.0
+offset_right = 187.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0.937255, 0.721569, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("3_7lot7")
+theme_override_font_sizes/font_size = 10
+text = "MC_3"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Yo" type="Label" parent="Creditos/Arte"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 14.0
+offset_right = 53.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.864675, 0.864675, 0.864675, 1)
+theme_override_fonts/font = ExtResource("3_7lot7")
+theme_override_font_sizes/font_size = 7
+text = "Yeferson Jaramillo"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Musica" type="Label" parent="Creditos"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 139.0
+offset_right = 240.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0.937255, 0.721569, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("3_7lot7")
+theme_override_font_sizes/font_size = 10
+text = "MC_5"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Yo" type="Label" parent="Creditos/Musica"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 14.0
+offset_right = 51.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.864675, 0.864675, 0.864675, 1)
+theme_override_fonts/font = ExtResource("3_7lot7")
+theme_override_font_sizes/font_size = 7
+text = "Yeferson Jaramillo"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Direccion_Creativa" type="Label" parent="Creditos"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 112.0
+offset_right = 160.0
+offset_bottom = 126.0
+theme_override_colors/font_color = Color(0.937255, 0.721569, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("3_7lot7")
+theme_override_font_sizes/font_size = 10
+text = "MC_1"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Yo" type="Label" parent="Creditos/Direccion_Creativa"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 13.0
+offset_right = 79.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0.862745, 0.862745, 0.862745, 1)
+theme_override_fonts/font = ExtResource("3_7lot7")
+theme_override_font_sizes/font_size = 7
+text = "Yeferson Jaramillo"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Yo" type="Sprite2D" parent="Creditos"]
+position = Vector2(160, 53.8638)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_u5xe0")
+
+[node name="Agradecimientos" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 116.0
+offset_top = 45.0
+offset_right = 201.0
+offset_bottom = 130.0
+theme_override_fonts/font = ExtResource("3_7lot7")
+theme_override_font_sizes/font_size = 8
+text = "MC_A"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Creditos_Ani_Play" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_aiule")
+}

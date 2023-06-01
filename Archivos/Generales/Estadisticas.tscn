@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://pxkqxgdbswcu"]
+
+[ext_resource type="Script" path="res://Archivos/Generales/Estadisticas.gd" id="1_vr17s"]
+
+[node name="Estadisticas" type="Node"]
+script = ExtResource("1_vr17s")

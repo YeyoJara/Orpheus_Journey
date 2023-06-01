@@ -1,0 +1,491 @@
+[gd_scene load_steps=62 format=3 uid="uid://j700oy2yxvor"]
+
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Inventario.gd" id="1_yqjt5"]
+[ext_resource type="FontFile" uid="uid://co61opcls3s22" path="res://Archivos/Documentos/Fuentes/Gelio Pasteli.ttf" id="2_gxxk2"]
+[ext_resource type="Texture2D" uid="uid://d1oq3j72l81hu" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Menu_Inventario_Sprite_Sheet.png" id="2_k4laf"]
+[ext_resource type="Texture2D" uid="uid://dtlfg2sleck5q" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Boton_Items.png" id="4_wecq3"]
+[ext_resource type="Texture2D" uid="uid://cgahndfuangfn" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0000.png" id="5_3wj4p"]
+[ext_resource type="Texture2D" uid="uid://w4r0xxx0fllj" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0001.png" id="6_6snf1"]
+[ext_resource type="Texture2D" uid="uid://d4gsf0tfv7q5y" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0002.png" id="7_sjg73"]
+[ext_resource type="Texture2D" uid="uid://2rnieyv4fn4u" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0003.png" id="8_ki7h1"]
+[ext_resource type="Texture2D" uid="uid://dd46m5g823wg2" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0004.png" id="9_khrbg"]
+[ext_resource type="Texture2D" uid="uid://dwxc4ggp3qmj4" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0005.png" id="10_36bsf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_elo22"]
+bg_color = Color(0.588235, 0.588235, 0.588235, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vsfjf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e6rwc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6w8yw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m4377"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_68g5m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lylyn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k2ks1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mxft5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ngerr"]
+
+[sub_resource type="Gradient" id="Gradient_8dr1c"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_046h1"]
+gradient = SubResource("Gradient_8dr1c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u81ff"]
+texture = SubResource("GradientTexture1D_046h1")
+texture_margin_bottom = 1.0
+draw_center = false
+
+[sub_resource type="Gradient" id="Gradient_hut1r"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_p7tqg"]
+gradient = SubResource("Gradient_hut1r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3h0c6"]
+texture = SubResource("GradientTexture1D_p7tqg")
+texture_margin_bottom = 1.0
+draw_center = false
+
+[sub_resource type="Gradient" id="Gradient_xgpf6"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rlabl"]
+gradient = SubResource("Gradient_xgpf6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nwkgl"]
+texture = SubResource("GradientTexture1D_rlabl")
+texture_margin_bottom = 1.0
+draw_center = false
+
+[sub_resource type="Gradient" id="Gradient_ve36c"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8jnbv"]
+gradient = SubResource("Gradient_ve36c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oee86"]
+texture = SubResource("GradientTexture1D_8jnbv")
+texture_margin_bottom = 1.0
+draw_center = false
+
+[sub_resource type="Gradient" id="Gradient_bocpr"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xc1vp"]
+gradient = SubResource("Gradient_bocpr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqno1"]
+texture = SubResource("GradientTexture1D_xc1vp")
+texture_margin_bottom = 1.0
+draw_center = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xb7tm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_flytd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_afyf0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nj47h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hqg7m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hqj3v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6i1uh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wweap"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sp3y1"]
+
+[sub_resource type="Gradient" id="Gradient_l3s2l"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_l6j5e"]
+gradient = SubResource("Gradient_l3s2l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ovjv"]
+texture = SubResource("GradientTexture1D_l6j5e")
+texture_margin_bottom = 1.0
+draw_center = false
+
+[sub_resource type="Gradient" id="Gradient_osd7b"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_n71rv"]
+gradient = SubResource("Gradient_osd7b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gsgfl"]
+texture = SubResource("GradientTexture1D_n71rv")
+texture_margin_bottom = 1.0
+draw_center = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_efc0f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o1ljq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4g7pm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ppa15"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hoftm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b3dtc"]
+texture = ExtResource("4_wecq3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u6uvm"]
+texture = ExtResource("4_wecq3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4fv1j"]
+texture = ExtResource("4_wecq3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rmt5g"]
+texture = ExtResource("4_wecq3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uarje"]
+texture = ExtResource("4_wecq3")
+modulate_color = Color(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_g02yc"]
+frames = 6
+speed_scale = 5.0
+frame_0/texture = ExtResource("5_3wj4p")
+frame_1/texture = ExtResource("6_6snf1")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("7_sjg73")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("8_ki7h1")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("9_khrbg")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("10_36bsf")
+frame_5/duration = 1.0
+
+[node name="Inventario" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqjt5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0.517647)
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="Fondo" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(160, 90)
+texture = ExtResource("2_k4laf")
+hframes = 3
+frame = 1
+
+[node name="Descripcion" type="Panel" parent="CanvasLayer"]
+offset_left = 160.0
+offset_top = 73.0
+offset_right = 260.0
+offset_bottom = 127.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_elo22")
+
+[node name="Texto" type="Label" parent="CanvasLayer"]
+offset_left = 161.0
+offset_top = 73.0
+offset_right = 260.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gxxk2")
+theme_override_font_sizes/font_size = 6
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Canciones" type="Button" parent="CanvasLayer"]
+offset_left = 49.0
+offset_top = 40.0
+offset_right = 124.0
+offset_bottom = 64.0
+focus_neighbor_right = NodePath("../Tragedia")
+focus_neighbor_bottom = NodePath("Lista_Canciones/Adagio_Amor")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gxxk2")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vsfjf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e6rwc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6w8yw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_m4377")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_68g5m")
+button_mask = 0
+text = "OI_1"
+flat = true
+
+[node name="Lista_Canciones" type="Control" parent="CanvasLayer/Canciones"]
+visible = false
+anchors_preset = 0
+offset_left = 2.0
+offset_right = 42.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Adagio_Amor" type="Button" parent="CanvasLayer/Canciones/Lista_Canciones"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 23.0
+offset_right = 85.0
+offset_bottom = 37.0
+focus_neighbor_top = NodePath("../..")
+focus_neighbor_bottom = NodePath("../Aletheia")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gxxk2")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lylyn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k2ks1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mxft5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ngerr")
+theme_override_styles/focus = SubResource("StyleBoxTexture_u81ff")
+button_mask = 0
+text = "---"
+flat = true
+alignment = 0
+
+[node name="Aletheia" type="Button" parent="CanvasLayer/Canciones/Lista_Canciones"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 37.0
+offset_right = 85.0
+offset_bottom = 51.0
+focus_neighbor_top = NodePath("../Adagio_Amor")
+focus_neighbor_bottom = NodePath("../Aria_Hermes")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gxxk2")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lylyn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k2ks1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mxft5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ngerr")
+theme_override_styles/focus = SubResource("StyleBoxTexture_3h0c6")
+button_mask = 0
+text = "---"
+flat = true
+alignment = 0
+
+[node name="Aria_Hermes" type="Button" parent="CanvasLayer/Canciones/Lista_Canciones"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 52.0
+offset_right = 85.0
+offset_bottom = 66.0
+focus_neighbor_top = NodePath("../Aletheia")
+focus_neighbor_bottom = NodePath("../Preludio")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gxxk2")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lylyn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k2ks1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mxft5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ngerr")
+theme_override_styles/focus = SubResource("StyleBoxTexture_nwkgl")
+button_mask = 0
+text = "---"
+flat = true
+alignment = 0
+
+[node name="Preludio" type="Button" parent="CanvasLayer/Canciones/Lista_Canciones"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 67.0
+offset_right = 85.0
+offset_bottom = 81.0
+focus_neighbor_top = NodePath("../Aria_Hermes")
+focus_neighbor_bottom = NodePath("../Recuerdo_Euridice")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gxxk2")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lylyn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k2ks1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mxft5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ngerr")
+theme_override_styles/focus = SubResource("StyleBoxTexture_oee86")
+button_mask = 0
+text = "---"
+flat = true
+alignment = 0
+
+[node name="Recuerdo_Euridice" type="Button" parent="CanvasLayer/Canciones/Lista_Canciones"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 81.0
+offset_right = 85.0
+offset_bottom = 95.0
+focus_neighbor_top = NodePath("../Preludio")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gxxk2")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lylyn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k2ks1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mxft5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ngerr")
+theme_override_styles/focus = SubResource("StyleBoxTexture_bqno1")
+button_mask = 0
+text = "CC_1"
+flat = true
+alignment = 0
+
+[node name="Tragedia" type="Button" parent="CanvasLayer"]
+offset_left = 124.0
+offset_top = 40.0
+offset_right = 198.0
+offset_bottom = 63.0
+focus_neighbor_left = NodePath("../Canciones")
+focus_neighbor_right = NodePath("../Items")
+focus_neighbor_bottom = NodePath("Lista_Tragedia/Carontes")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gxxk2")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xb7tm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flytd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_afyf0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_nj47h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hqg7m")
+button_mask = 0
+text = "OI_2"
+flat = true
+
+[node name="Lista_Tragedia" type="Control" parent="CanvasLayer/Tragedia"]
+visible = false
+anchors_preset = 0
+offset_left = 6.0
+offset_right = 46.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Carontes" type="Button" parent="CanvasLayer/Tragedia/Lista_Tragedia"]
+layout_mode = 0
+offset_left = -69.0
+offset_top = 31.0
+offset_right = 6.0
+offset_bottom = 42.0
+focus_neighbor_top = NodePath("../..")
+focus_neighbor_bottom = NodePath("../Apolo_Caliope")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gxxk2")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hqj3v")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6i1uh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wweap")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sp3y1")
+theme_override_styles/focus = SubResource("StyleBoxTexture_1ovjv")
+button_mask = 0
+text = "---"
+flat = true
+alignment = 0
+
+[node name="Apolo_Caliope" type="Button" parent="CanvasLayer/Tragedia/Lista_Tragedia"]
+layout_mode = 0
+offset_left = -69.0
+offset_top = 45.0
+offset_right = 6.0
+offset_bottom = 56.0
+focus_neighbor_top = NodePath("../Carontes")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gxxk2")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hqj3v")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6i1uh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wweap")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sp3y1")
+theme_override_styles/focus = SubResource("StyleBoxTexture_gsgfl")
+button_mask = 0
+text = "---"
+flat = true
+alignment = 0
+
+[node name="Items" type="Button" parent="CanvasLayer"]
+offset_left = 198.0
+offset_top = 41.0
+offset_right = 272.0
+offset_bottom = 62.0
+focus_neighbor_left = NodePath("../Tragedia")
+focus_neighbor_bottom = NodePath("Lista_Items/Rama_Dorada")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gxxk2")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxEmpty_efc0f")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_o1ljq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4g7pm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ppa15")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hoftm")
+button_mask = 0
+text = "OI_3"
+flat = true
+
+[node name="Lista_Items" type="Control" parent="CanvasLayer/Items"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Rama_Dorada" type="Button" parent="CanvasLayer/Items/Lista_Items"]
+layout_mode = 0
+offset_left = -137.778
+offset_top = 29.6477
+offset_right = -115.778
+offset_bottom = 51.6477
+focus_neighbor_top = NodePath("../..")
+mouse_filter = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_b3dtc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_u6uvm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4fv1j")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rmt5g")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uarje")
+button_mask = 0
+
+[node name="Rama_Dorada" type="TextureRect" parent="CanvasLayer/Items/Lista_Items/Rama_Dorada"]
+layout_mode = 0
+offset_right = 22.0
+offset_bottom = 22.0
+scale = Vector2(1.00341, 0.999788)
+texture = SubResource("AnimatedTexture_g02yc")
+
+[connection signal="button_down" from="CanvasLayer/Canciones" to="." method="_on_canciones_button_down"]
+[connection signal="button_down" from="CanvasLayer/Canciones/Lista_Canciones/Adagio_Amor" to="." method="_on_adagio_amor_button_down"]
+[connection signal="button_down" from="CanvasLayer/Canciones/Lista_Canciones/Aletheia" to="." method="_on_aletheia_button_down"]
+[connection signal="button_down" from="CanvasLayer/Canciones/Lista_Canciones/Aria_Hermes" to="." method="_on_aria_hermes_button_down"]
+[connection signal="button_down" from="CanvasLayer/Canciones/Lista_Canciones/Preludio" to="." method="_on_preludio_button_down"]
+[connection signal="button_down" from="CanvasLayer/Canciones/Lista_Canciones/Recuerdo_Euridice" to="." method="_on_recuerdo_euridice_button_down"]
+[connection signal="button_down" from="CanvasLayer/Tragedia" to="." method="_on_tragedia_button_down"]
+[connection signal="button_down" from="CanvasLayer/Tragedia/Lista_Tragedia/Carontes" to="." method="_on_carontes_button_down"]
+[connection signal="button_down" from="CanvasLayer/Tragedia/Lista_Tragedia/Apolo_Caliope" to="." method="_on_apolo_caliope_button_down"]
+[connection signal="button_down" from="CanvasLayer/Items" to="." method="_on_items_button_down"]
+[connection signal="button_down" from="CanvasLayer/Items/Lista_Items/Rama_Dorada" to="." method="_on_rama_dorada_button_down"]

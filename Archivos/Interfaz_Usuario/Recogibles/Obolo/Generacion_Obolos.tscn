@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm7x3lkle0pnu"]
+
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Recogibles/Obolo/Generacion_Obolos.gd" id="1_83cug"]
+
+[node name="Generacion_Obolos" type="Node2D"]
+script = ExtResource("1_83cug")
+Area_Aparicion = Rect2(0, 0, 10, 10)

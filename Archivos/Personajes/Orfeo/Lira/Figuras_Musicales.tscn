@@ -1,0 +1,141 @@
+[gd_scene load_steps=23 format=3 uid="uid://bd8sv1u673brf"]
+
+[ext_resource type="Script" path="res://Archivos/Personajes/Orfeo/Lira/Figuras_Musicales.gd" id="1_1idl7"]
+[ext_resource type="Texture2D" uid="uid://m0ilxxovpvhf" path="res://Archivos/Personajes/Orfeo/Lira/Figuras_Musicales_Sprite_Sheet.png" id="1_w8106"]
+[ext_resource type="PackedScene" uid="uid://qhkw83hg7dby" path="res://Archivos/Generales/Cajas_Colision/Caja_Golpe.tscn" id="3_tk2fq"]
+[ext_resource type="Script" path="res://Archivos/Personajes/Orfeo/Lira/Golpe_Lira.gd" id="4_1be8a"]
+[ext_resource type="Texture2D" uid="uid://cqm5xat7o4c3x" path="res://Archivos/Personajes/Orfeo/Lira/Corcheas/Corcheas0000.png" id="7_bp4ms"]
+[ext_resource type="Texture2D" uid="uid://38nl1hjihf74" path="res://Archivos/Personajes/Orfeo/Lira/Corcheas/Corcheas0001.png" id="8_7t1if"]
+[ext_resource type="Texture2D" uid="uid://fcspwjjb77lv" path="res://Archivos/Personajes/Orfeo/Lira/Corcheas/Corcheas0002.png" id="9_hlvsv"]
+[ext_resource type="Texture2D" uid="uid://ntp2juvughyf" path="res://Archivos/Personajes/Orfeo/Lira/Corcheas/Corcheas0003.png" id="10_bf0nc"]
+[ext_resource type="AudioStream" uid="uid://ctlip1858n5aj" path="res://Archivos/Musica/Efectos/Disparar.wav" id="10_qg1f8"]
+[ext_resource type="Texture2D" uid="uid://djbdt0y4uwpbd" path="res://Archivos/Personajes/Orfeo/Lira/Corcheas/Corcheas0004.png" id="11_nh1fb"]
+
+[sub_resource type="Gradient" id="Gradient_pytbi"]
+colors = PackedColorArray(1, 1, 1, 0.588235, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2xxvg"]
+gradient = SubResource("Gradient_pytbi")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vsshh"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.25
+scale_max = 0.25
+color_ramp = SubResource("GradientTexture1D_2xxvg")
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_867et"]
+frames = 5
+frame_0/texture = ExtResource("7_bp4ms")
+frame_0/duration = 0.2
+frame_1/texture = ExtResource("8_7t1if")
+frame_1/duration = 0.2
+frame_2/texture = ExtResource("9_hlvsv")
+frame_2/duration = 0.2
+frame_3/texture = ExtResource("10_bf0nc")
+frame_3/duration = 0.2
+frame_4/texture = ExtResource("11_nh1fb")
+frame_4/duration = 0.2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7ss2"]
+atlas = ExtResource("1_w8106")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqtd1"]
+atlas = ExtResource("1_w8106")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekhnr"]
+atlas = ExtResource("1_w8106")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfj8q"]
+atlas = ExtResource("1_w8106")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77np8"]
+atlas = ExtResource("1_w8106")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ehvhy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7ss2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqtd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekhnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfj8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77np8")
+}],
+"loop": true,
+"name": &"Animacion",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a1wev"]
+size = Vector2(6.98659, 7.32106)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvnua"]
+size = Vector2(7.50687, 8.02715)
+
+[node name="Figuras_Musicales" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_1idl7")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(6, -6)
+amount = 4
+process_material = SubResource("ParticleProcessMaterial_vsshh")
+texture = SubResource("AnimatedTexture_867et")
+lifetime = 0.5
+
+[node name="Figuras_Musicales" type="AnimatedSprite2D" parent="."]
+position = Vector2(6, -6)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_ehvhy")
+animation = &"Animacion"
+autoplay = "Animacion"
+frame_progress = 0.66814
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.5, -6.5)
+shape = SubResource("RectangleShape2D_a1wev")
+debug_color = Color(0, 0.596078, 0.72549, 0.419608)
+
+[node name="Caja_Golpe" parent="." instance=ExtResource("3_tk2fq")]
+collision_layer = 8
+collision_mask = 16
+script = ExtResource("4_1be8a")
+Golpe = 1.0
+
+[node name="CollisionShape2D" parent="Caja_Golpe" index="0"]
+position = Vector2(6.5, -6.5)
+shape = SubResource("RectangleShape2D_fvnua")
+debug_color = Color(1, 0.00784314, 0.0470588, 0.419608)
+
+[node name="Tiempo_Vida" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Camera_Figuras_Musicales" type="Camera2D" parent="."]
+
+[node name="Disparar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_qg1f8")
+volume_db = -10.0
+autoplay = true
+bus = &"Efectos"
+
+[connection signal="Corcheas_Vida" from="." to="." method="_on_corcheas_vida"]
+[connection signal="area_entered" from="Caja_Golpe" to="." method="_on_caja_golpe_area_entered"]
+[connection signal="timeout" from="Tiempo_Vida" to="." method="_on_tiempo_vida_timeout"]
+
+[editable path="Caja_Golpe"]

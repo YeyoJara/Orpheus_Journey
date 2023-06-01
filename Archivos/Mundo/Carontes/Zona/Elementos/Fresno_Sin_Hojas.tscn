@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5gmwe8625mu7"]
+
+[ext_resource type="Texture2D" uid="uid://bo6lwnfancgs3" path="res://Archivos/Mundo/Carontes/Zona/Elementos/Arbol_Fresno_Sin_Hojas.png" id="1_fokw1"]
+[ext_resource type="Texture2D" uid="uid://chtve1mahcopd" path="res://Archivos/Sombra/Sombra_Arboles_Sprite_Sheet.png" id="2_vgoug"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xbhwf"]
+radius = 3.0
+height = 10.0
+
+[node name="Fresno_Sin_Hojas" type="Sprite2D"]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_fokw1")
+offset = Vector2(0, -16)
+
+[node name="Sombra" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1, -15)
+texture = ExtResource("2_vgoug")
+hframes = 4
+frame = 3
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 11)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xbhwf")

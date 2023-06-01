@@ -1,0 +1,1035 @@
+[gd_scene load_steps=46 format=3 uid="uid://dfi7k0q0eoy68"]
+
+[ext_resource type="Script" path="res://Archivos/Enemigos/Esqueletos/Esqueleto_Arquero/Flecha/Flecha.gd" id="1_6ti4m"]
+[ext_resource type="Texture2D" uid="uid://bp7j5gx4ta3mv" path="res://Archivos/Enemigos/Esqueletos/Esqueleto_Arquero/Flecha/Flecha_Sprite_Sheet.png" id="1_81b8h"]
+[ext_resource type="Texture2D" uid="uid://dgfd0xiqlwnbv" path="res://Archivos/Sombra/Sombra_Flecha_Sprite_Sheet.png" id="3_hdhy3"]
+[ext_resource type="PackedScene" uid="uid://qhkw83hg7dby" path="res://Archivos/Generales/Cajas_Colision/Caja_Golpe.tscn" id="3_pgvru"]
+[ext_resource type="PackedScene" uid="uid://bjf855h26o70t" path="res://Archivos/Generales/Cajas_Colision/Zona_Detectar.tscn" id="5_thtbx"]
+[ext_resource type="AudioStream" uid="uid://comim2e040o7o" path="res://Archivos/Musica/Efectos/Flecha_Esqueleto.wav" id="6_b1dfj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_17q73"]
+radius = 0.493088
+
+[sub_resource type="Animation" id="Animation_h6cvj"]
+resource_name = "Flecha_1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6.52232, -5.46286)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5.11843, -5.50778)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_0s83t"]
+resource_name = "Flecha_10"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4.56893, -4.46961)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.23534, -4.81972)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
+[sub_resource type="Animation" id="Animation_dfx3b"]
+resource_name = "Flecha_11"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.54933, -2.54933)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.43108, -3.5673)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+
+[sub_resource type="Animation" id="Animation_cju0b"]
+resource_name = "Flecha_12"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [11]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.52298, -0.52973)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.46342, -1.97327)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [11]
+}
+
+[sub_resource type="Animation" id="Animation_nl0aa"]
+resource_name = "Flecha_13"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.430408, -0.463513)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.483114, -1.88355)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+
+[sub_resource type="Animation" id="Animation_3fxcb"]
+resource_name = "Flecha_14"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [13]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2.51622, -0.463513)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2.14059, -1.97327)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [13]
+}
+
+[sub_resource type="Animation" id="Animation_vi676"]
+resource_name = "Flecha_15"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4.4365, -2.54933)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.39301, -3.5673)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+
+[sub_resource type="Animation" id="Animation_khhqs"]
+resource_name = "Flecha_16"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [15]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6.4561, -3.54258)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5.02421, -3.73749)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [15]
+}
+
+[sub_resource type="Animation" id="Animation_ho6pm"]
+resource_name = "Flecha_2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6.48921, -7.48246)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5.05819, -7.13898)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_wdv44"]
+resource_name = "Flecha_3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4.46961, -9.53517)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.41929, -8.33884)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_0laui"]
+resource_name = "Flecha_4"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.54258, -11.5548)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.07786, -10.1377)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_l38fh"]
+resource_name = "Flecha_5"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1.48987, -11.5548)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1.52989, -9.9578)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_yf4qq"]
+resource_name = "Flecha_6"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.529731, -11.5548)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.05524, -10.0633)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="Animation_u3vqp"]
+resource_name = "Flecha_7"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.54933, -9.60138)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.36753, -8.54633)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_bclrg"]
+resource_name = "Flecha_8"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4.60204, -8.60814)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.89071, -8.23742)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+
+[sub_resource type="Animation" id="Animation_ry8jk"]
+resource_name = "Flecha_9"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4.50272, -6.62164)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Flecha_Colision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.89062, -6.50348)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sombra:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aa3g7"]
+_data = {
+"Flecha_1": SubResource("Animation_h6cvj"),
+"Flecha_10": SubResource("Animation_0s83t"),
+"Flecha_11": SubResource("Animation_dfx3b"),
+"Flecha_12": SubResource("Animation_cju0b"),
+"Flecha_13": SubResource("Animation_nl0aa"),
+"Flecha_14": SubResource("Animation_3fxcb"),
+"Flecha_15": SubResource("Animation_vi676"),
+"Flecha_16": SubResource("Animation_khhqs"),
+"Flecha_2": SubResource("Animation_ho6pm"),
+"Flecha_3": SubResource("Animation_wdv44"),
+"Flecha_4": SubResource("Animation_0laui"),
+"Flecha_5": SubResource("Animation_l38fh"),
+"Flecha_6": SubResource("Animation_yf4qq"),
+"Flecha_7": SubResource("Animation_u3vqp"),
+"Flecha_8": SubResource("Animation_bclrg"),
+"Flecha_9": SubResource("Animation_ry8jk")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dgbw0"]
+animation = &"Flecha_1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_otecc"]
+animation = &"Flecha_2"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pkonw"]
+animation = &"Flecha_11"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k7xqv"]
+animation = &"Flecha_12"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_15wko"]
+animation = &"Flecha_13"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_aqol1"]
+animation = &"Flecha_14"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5meib"]
+animation = &"Flecha_15"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jk2vf"]
+animation = &"Flecha_16"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ay7wa"]
+animation = &"Flecha_3"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_58m4q"]
+animation = &"Flecha_4"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x5r1s"]
+animation = &"Flecha_5"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rqbw8"]
+animation = &"Flecha_6"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qtl8c"]
+animation = &"Flecha_7"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y7qg0"]
+animation = &"Flecha_8"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_inoky"]
+animation = &"Flecha_9"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_w5w02"]
+animation = &"Flecha_10"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_fu718"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_dgbw0")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_otecc")
+blend_point_1/pos = Vector2(-0.9, -0.5)
+blend_point_2/node = SubResource("AnimationNodeAnimation_ay7wa")
+blend_point_2/pos = Vector2(-0.7, -0.7)
+blend_point_3/node = SubResource("AnimationNodeAnimation_58m4q")
+blend_point_3/pos = Vector2(-0.5, -0.9)
+blend_point_4/node = SubResource("AnimationNodeAnimation_x5r1s")
+blend_point_4/pos = Vector2(0, -1)
+blend_point_5/node = SubResource("AnimationNodeAnimation_rqbw8")
+blend_point_5/pos = Vector2(0.5, -0.9)
+blend_point_6/node = SubResource("AnimationNodeAnimation_qtl8c")
+blend_point_6/pos = Vector2(0.7, -0.7)
+blend_point_7/node = SubResource("AnimationNodeAnimation_y7qg0")
+blend_point_7/pos = Vector2(0.9, -0.5)
+blend_point_8/node = SubResource("AnimationNodeAnimation_inoky")
+blend_point_8/pos = Vector2(1, 0)
+blend_point_9/node = SubResource("AnimationNodeAnimation_w5w02")
+blend_point_9/pos = Vector2(0.9, 0.5)
+blend_point_10/node = SubResource("AnimationNodeAnimation_pkonw")
+blend_point_10/pos = Vector2(0.7, 0.7)
+blend_point_11/node = SubResource("AnimationNodeAnimation_k7xqv")
+blend_point_11/pos = Vector2(0.5, 0.9)
+blend_point_12/node = SubResource("AnimationNodeAnimation_15wko")
+blend_point_12/pos = Vector2(0, 1)
+blend_point_13/node = SubResource("AnimationNodeAnimation_aqol1")
+blend_point_13/pos = Vector2(-0.5, 0.9)
+blend_point_14/node = SubResource("AnimationNodeAnimation_5meib")
+blend_point_14/pos = Vector2(-0.7, 0.7)
+blend_point_15/node = SubResource("AnimationNodeAnimation_jk2vf")
+blend_point_15/pos = Vector2(-0.9, 0.5)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_hvl5o"]
+states/Flecha/node = SubResource("AnimationNodeBlendSpace2D_fu718")
+states/Flecha/position = Vector2(425, 100)
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_hei5o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yeiay"]
+radius = 0.830195
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1hjuu"]
+radius = 110.0
+
+[node name="Flecha" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_6ti4m")
+
+[node name="Flecha" type="Sprite2D" parent="."]
+texture = ExtResource("1_81b8h")
+offset = Vector2(-1, -6)
+hframes = 16
+
+[node name="Sombra" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(5.016, -3.40246)
+texture = ExtResource("3_hdhy3")
+offset = Vector2(-6, -1)
+hframes = 16
+
+[node name="Flecha_Colision" type="CollisionShape2D" parent="."]
+position = Vector2(-5.11843, -5.50778)
+shape = SubResource("CircleShape2D_17q73")
+
+[node name="Flecha_Ani_Play" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Flecha")
+libraries = {
+"": SubResource("AnimationLibrary_aa3g7")
+}
+
+[node name="Flecha_Tree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_hvl5o")
+anim_player = NodePath("../Flecha_Ani_Play")
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_hei5o")
+parameters/Flecha/blend_position = Vector2(0.3168, 1.82096)
+
+[node name="Areas" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="Caja_Golpe" parent="Areas" instance=ExtResource("3_pgvru")]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="Areas/Caja_Golpe" index="0"]
+position = Vector2(-6.52232, -5.46286)
+shape = SubResource("CircleShape2D_yeiay")
+debug_color = Color(0.992157, 0, 0.235294, 0.419608)
+
+[node name="Direccion_Flecha" parent="Areas" instance=ExtResource("5_thtbx")]
+visible = false
+collision_mask = 64
+
+[node name="CollisionShape2D" parent="Areas/Direccion_Flecha" index="0"]
+shape = SubResource("CircleShape2D_1hjuu")
+debug_color = Color(0.52549, 0, 0.262745, 0.419608)
+
+[node name="Temporizadores" type="Timer" parent="."]
+
+[node name="Trayectoria" type="Timer" parent="Temporizadores"]
+wait_time = 0.1
+
+[node name="Tiempo_Vida" type="Timer" parent="Temporizadores"]
+wait_time = 3.0
+
+[node name="Colision" type="Timer" parent="Temporizadores"]
+wait_time = 0.2
+
+[node name="Flecha_Sonido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_b1dfj")
+volume_db = 10.0
+autoplay = true
+
+[connection signal="area_entered" from="Areas/Caja_Golpe" to="." method="_on_caja_golpe_area_entered"]
+[connection signal="timeout" from="Temporizadores/Trayectoria" to="." method="_on_trayectoria_timeout"]
+[connection signal="timeout" from="Temporizadores/Tiempo_Vida" to="." method="_on_tiempo_vida_timeout"]
+[connection signal="timeout" from="Temporizadores/Colision" to="." method="_on_colision_timeout"]
+
+[editable path="Areas/Caja_Golpe"]
+[editable path="Areas/Direccion_Flecha"]

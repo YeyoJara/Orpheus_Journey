@@ -1,0 +1,131 @@
+[gd_scene load_steps=19 format=3 uid="uid://sndost4ruuvu"]
+
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Menus/Fin_Juego/Fin_Travesia.gd" id="1_tct4f"]
+[ext_resource type="Texture2D" uid="uid://4dyl4hltolw8" path="res://Archivos/Interfaz_Usuario/Menus/Fin_Juego/Fin_Travesía.png" id="1_vlbul"]
+[ext_resource type="FontFile" uid="uid://co61opcls3s22" path="res://Archivos/Documentos/Fuentes/Gelio Pasteli.ttf" id="2_q81tc"]
+[ext_resource type="PackedScene" uid="uid://u6rd41hr10rp" path="res://Archivos/Generales/Transicion_Suave.tscn" id="4_2rn0g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exk8g"]
+bg_color = Color(0, 0, 0, 0.588235)
+
+[sub_resource type="Gradient" id="Gradient_s4ren"]
+offsets = PackedFloat32Array(0, 0.467742, 0.650538)
+colors = PackedColorArray(0.588235, 0.588235, 0.588235, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xw261"]
+gradient = SubResource("Gradient_s4ren")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dkl6x"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+color_ramp = SubResource("GradientTexture1D_xw261")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r24rv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4byjk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_esm00"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jevo0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_am0hh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_divdm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1gu30"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1gh2m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_duhfw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0n4sa"]
+
+[node name="Fin_Travesia" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tct4f")
+metadata/_edit_vertical_guides_ = [160.25]
+metadata/_edit_horizontal_guides_ = [130.5]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_right = 320.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_exk8g")
+
+[node name="Titulo_Sombra" type="Sprite2D" parent="CanvasLayer"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(156, 67)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_vlbul")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="CanvasLayer"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(160, 70)
+scale = Vector2(0.5, 0.5)
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_dkl6x")
+texture = ExtResource("1_vlbul")
+lifetime = 2.5
+speed_scale = 0.08
+local_coords = true
+
+[node name="Titulo" type="Sprite2D" parent="CanvasLayer"]
+modulate = Color(0.392157, 0.392157, 0.392157, 1)
+position = Vector2(160, 70)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_vlbul")
+
+[node name="Continuar" type="Button" parent="CanvasLayer"]
+offset_left = 75.0
+offset_top = 130.0
+offset_right = 155.0
+offset_bottom = 145.0
+focus_neighbor_right = NodePath("../Menu_Principal")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q81tc")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_r24rv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4byjk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_esm00")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jevo0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_am0hh")
+button_mask = 0
+text = "MP_1"
+flat = true
+text_overrun_behavior = 2
+
+[node name="Menu_Principal" type="Button" parent="CanvasLayer"]
+offset_left = 165.0
+offset_top = 130.0
+offset_right = 245.0
+offset_bottom = 145.0
+focus_neighbor_left = NodePath("../Continuar")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q81tc")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_divdm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1gu30")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1gh2m")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_duhfw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0n4sa")
+button_mask = 0
+text = "MP_3"
+flat = true
+
+[node name="Transicion_Suave" parent="." instance=ExtResource("4_2rn0g")]
+
+[connection signal="button_down" from="CanvasLayer/Continuar" to="." method="_on_continuar_button_down"]
+[connection signal="button_down" from="CanvasLayer/Menu_Principal" to="." method="_on_menu_principal_button_down"]

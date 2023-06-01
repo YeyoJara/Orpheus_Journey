@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnsxxatdvmap6"]
+
+[ext_resource type="Texture2D" uid="uid://k35c7p5tmqo0" path="res://Archivos/Enemigos/Esqueletos/Esqueleto_Muerto/Esqueleto_Muerto.png" id="1_bh44y"]
+[ext_resource type="Script" path="res://Archivos/Enemigos/Esqueletos/Esqueleto_Muerto/Esqueleto_Muerto.gd" id="1_cufc8"]
+[ext_resource type="PackedScene" uid="uid://dieu2w7b2qxlb" path="res://Archivos/Generales/Cajas_Colision/Caja_Lesion.tscn" id="2_b7rej"]
+[ext_resource type="PackedScene" uid="uid://pxkqxgdbswcu" path="res://Archivos/Generales/Estadisticas.tscn" id="3_fcbii"]
+[ext_resource type="Texture2D" uid="uid://bj3qs8wasrh0l" path="res://Archivos/Sombra/Sombra_Sprite_Sheet.png" id="5_nfc6m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j7wxx"]
+radius = 3.0
+height = 12.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ipyi7"]
+radius = 4.0
+height = 16.0
+
+[node name="Esqueleto_Muerto" type="StaticBody2D"]
+y_sort_enabled = true
+collision_layer = 16
+collision_mask = 3
+script = ExtResource("1_cufc8")
+
+[node name="Esqueleto_Muerto" type="Sprite2D" parent="."]
+texture = ExtResource("1_bh44y")
+
+[node name="Sombra" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1, 3)
+texture = ExtResource("5_nfc6m")
+hframes = 8
+
+[node name="Esqueleto_Colision" type="CollisionShape2D" parent="."]
+position = Vector2(1, 13)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_j7wxx")
+
+[node name="Estadisticas" parent="." instance=ExtResource("3_fcbii")]
+Vida_Maxima = 2.0
+
+[node name="Caja_Lesion" parent="." instance=ExtResource("2_b7rej")]
+visible = false
+position = Vector2(1, 13)
+collision_layer = 16
+collision_mask = 8
+Astillas = true
+
+[node name="CollisionShape2D" parent="Caja_Lesion" index="0"]
+rotation = 4.71239
+shape = SubResource("CapsuleShape2D_ipyi7")
+debug_color = Color(0.996078, 0, 0, 0.419608)
+
+[connection signal="area_entered" from="Caja_Lesion" to="." method="_on_caja_lesion_area_entered"]
+
+[editable path="Caja_Lesion"]

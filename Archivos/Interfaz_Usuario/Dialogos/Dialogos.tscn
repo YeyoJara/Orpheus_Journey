@@ -1,0 +1,114 @@
+[gd_scene load_steps=11 format=3 uid="uid://b8eulkgqf4e0s"]
+
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Dialogos/Dialogos.gd" id="1_07465"]
+[ext_resource type="FontFile" uid="uid://co61opcls3s22" path="res://Archivos/Documentos/Fuentes/Gelio Pasteli.ttf" id="2_8goep"]
+[ext_resource type="Texture2D" uid="uid://d04a2itgveac0" path="res://Archivos/Interfaz_Usuario/Elementos/Boton_Siguiente.png" id="3_jl6kd"]
+[ext_resource type="Texture2D" uid="uid://dop0k2bnq3wr0" path="res://Archivos/Interfaz_Usuario/Elementos/Boton_Cerrar.png" id="4_cdv1c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_csa51"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7gcb"]
+bg_color = Color(0.435294, 0.352941, 0.0862745, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6v3i"]
+bg_color = Color(0.435294, 0.352941, 0.0862745, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bj5l3"]
+bg_color = Color(0.435294, 0.352941, 0.0862745, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5u2m3"]
+bg_color = Color(0.435294, 0.352941, 0.0862745, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57ohu"]
+bg_color = Color(0.996078, 0.784314, 0.0941176, 1)
+
+[node name="Dialogos" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_07465")
+metadata/_edit_horizontal_guides_ = [120.211, 81.6957]
+metadata/_edit_vertical_guides_ = [160.458]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_top = 110.0
+offset_right = 320.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_csa51")
+
+[node name="Nombre" type="Label" parent="CanvasLayer"]
+offset_top = 110.0
+offset_right = 1.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("2_8goep")
+theme_override_font_sizes/font_size = 10
+
+[node name="Texto" type="Label" parent="CanvasLayer"]
+process_mode = 3
+offset_top = 125.0
+offset_right = 320.0
+offset_bottom = 180.0
+theme_override_fonts/font = ExtResource("2_8goep")
+theme_override_font_sizes/font_size = 8
+autowrap_mode = 3
+
+[node name="Siguiente" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(303.355, 115.24)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_jl6kd")
+
+[node name="Cerrar" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(313.274, 115.111)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_cdv1c")
+
+[node name="Rama_Dorada" type="Button" parent="CanvasLayer"]
+offset_left = 73.762
+offset_top = 157.146
+offset_right = 137.762
+offset_bottom = 171.146
+focus_neighbor_right = NodePath("../No_Rama_Dorada")
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8goep")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_l7gcb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c6v3i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bj5l3")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_5u2m3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57ohu")
+button_mask = 0
+text = "Dar Rama Dorada"
+
+[node name="No_Rama_Dorada" type="Button" parent="CanvasLayer"]
+offset_left = 183.0
+offset_top = 157.0
+offset_right = 255.0
+offset_bottom = 171.0
+focus_neighbor_left = NodePath("../Rama_Dorada")
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8goep")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_l7gcb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c6v3i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bj5l3")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_5u2m3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_57ohu")
+button_mask = 0
+text = "No Dar Rama Dorada"
+
+[connection signal="button_down" from="CanvasLayer/Rama_Dorada" to="." method="_on_rama_dorada_button_down"]
+[connection signal="button_down" from="CanvasLayer/No_Rama_Dorada" to="." method="_on_no_rama_dorada_button_down"]

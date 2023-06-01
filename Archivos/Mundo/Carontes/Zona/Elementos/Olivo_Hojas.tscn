@@ -1,0 +1,136 @@
+[gd_scene load_steps=17 format=3 uid="uid://cbge3hbuxet2m"]
+
+[ext_resource type="Texture2D" uid="uid://bln34ipc0i6el" path="res://Archivos/Mundo/Carontes/Zona/Elementos/Arbol_Olivo.png" id="1_bvyuk"]
+[ext_resource type="Script" path="res://Archivos/Mundo/Carontes/Zona/Elementos/Olivo_Hojas.gd" id="2_fdnyn"]
+[ext_resource type="Texture2D" uid="uid://chtve1mahcopd" path="res://Archivos/Sombra/Sombra_Arboles_Sprite_Sheet.png" id="2_tw75y"]
+[ext_resource type="Texture2D" uid="uid://c8ck2g2n2e0su" path="res://Archivos/Mundo/Carontes/Zona/Elementos/Hojas_Olivo_Cayendo_Sprite_Sheet.png" id="3_ero6f"]
+[ext_resource type="AudioStream" uid="uid://bmecjue0iv8fh" path="res://Archivos/Musica/Efectos/Hojas_Cayendo.wav" id="5_6by78"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mtix"]
+atlas = ExtResource("3_ero6f")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rh1im"]
+atlas = ExtResource("3_ero6f")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22rxt"]
+atlas = ExtResource("3_ero6f")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hec87"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mtix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rh1im")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22rxt")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"Animacion",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83kiv"]
+atlas = ExtResource("2_tw75y")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2jkm"]
+atlas = ExtResource("2_tw75y")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhnwa"]
+atlas = ExtResource("2_tw75y")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2py78"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83kiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2jkm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhnwa")
+}],
+"loop": true,
+"name": &"Sombra",
+"speed": 2.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8rxj6"]
+radius = 3.86082
+height = 15.2921
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_llsqe"]
+radius = 0.8
+height = 18.8429
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_64v5t"]
+radius = 0.8
+height = 24.5675
+
+[node name="Olivo_Hojas" type="Sprite2D"]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_bvyuk")
+offset = Vector2(0, -16)
+script = ExtResource("2_fdnyn")
+
+[node name="Hojas_Olivo_Cayendo" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hec87")
+animation = &"Animacion"
+frame = 3
+frame_progress = 1.0
+offset = Vector2(0, -25)
+
+[node name="Sombra" type="AnimatedSprite2D" parent="."]
+z_index = -1
+position = Vector2(-0.115219, -12.738)
+scale = Vector2(0.95, 0.95)
+sprite_frames = SubResource("SpriteFrames_2py78")
+animation = &"Sombra"
+autoplay = "Sombra"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 11.05)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_8rxj6")
+
+[node name="Areas" type="Area2D" parent="."]
+
+[node name="Liberar_Hojas_Derecha" type="Area2D" parent="Areas"]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Liberar_Hojas_Derecha"]
+position = Vector2(14.8165, -6.11741)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_llsqe")
+
+[node name="Liberar_Hojas_Izquierda" type="Area2D" parent="Areas"]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/Liberar_Hojas_Izquierda"]
+position = Vector2(-16.893, -6.11741)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_64v5t")
+
+[node name="Hojas_Cayendo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_6by78")
+volume_db = 10.0
+bus = &"Efectos"
+
+[connection signal="area_entered" from="Areas/Liberar_Hojas_Derecha" to="." method="_on_liberar_hojas_derecha_area_entered"]
+[connection signal="area_entered" from="Areas/Liberar_Hojas_Izquierda" to="." method="_on_liberar_hojas_izquierda_area_entered"]

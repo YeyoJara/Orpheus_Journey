@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c10iggq5l1a5j"]
+
+[ext_resource type="Texture2D" uid="uid://c1un0qdeh00vr" path="res://Archivos/Mundo/Carontes/Arena/Elementos/Arbol_Olivo_Sin_Hojas.png" id="1_8avjf"]
+[ext_resource type="Texture2D" uid="uid://chtve1mahcopd" path="res://Archivos/Sombra/Sombra_Arboles_Sprite_Sheet.png" id="2_agk6v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_axwnn"]
+radius = 3.86
+height = 15.29
+
+[node name="Olivo_Sin_Hojas" type="Sprite2D"]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_8avjf")
+offset = Vector2(0, -16)
+
+[node name="Sombra" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(3.2, -44.573)
+scale = Vector2(2, 2)
+texture = ExtResource("2_agk6v")
+hframes = 4
+frame = 3
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 11.05)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_axwnn")

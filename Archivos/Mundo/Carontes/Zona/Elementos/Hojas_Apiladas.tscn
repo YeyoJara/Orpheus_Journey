@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://e8prpv7mtxm5"]
+
+[ext_resource type="Texture2D" uid="uid://hwhym03hckgc" path="res://Archivos/Mundo/Carontes/Zona/Elementos/Hojas_Apiladas.png" id="1_kv3k8"]
+[ext_resource type="Script" path="res://Archivos/Mundo/Carontes/Zona/Elementos/Hojas_Apiladas.gd" id="2_lshin"]
+[ext_resource type="PackedScene" uid="uid://dieu2w7b2qxlb" path="res://Archivos/Generales/Cajas_Colision/Caja_Lesion.tscn" id="2_yxux6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j7bnm"]
+radius = 5.41778
+
+[node name="Hojas_Apiladas" type="Sprite2D"]
+texture = ExtResource("1_kv3k8")
+script = ExtResource("2_lshin")
+
+[node name="Caja_Lesion" parent="." instance=ExtResource("2_yxux6")]
+collision_mask = 8
+
+[node name="CollisionShape2D" parent="Caja_Lesion" index="0"]
+position = Vector2(-0.168417, 10.4371)
+shape = SubResource("CircleShape2D_j7bnm")
+
+[connection signal="area_entered" from="Caja_Lesion" to="." method="_on_caja_lesion_area_entered"]
+
+[editable path="Caja_Lesion"]

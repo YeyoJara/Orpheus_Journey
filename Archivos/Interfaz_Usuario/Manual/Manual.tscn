@@ -1,0 +1,948 @@
+[gd_scene load_steps=54 format=3 uid="uid://crs6kwsqe2gnf"]
+
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Manual/Manual.gd" id="1_gku0t"]
+[ext_resource type="Texture2D" uid="uid://pmldkhliy5am" path="res://Archivos/Interfaz_Usuario/Manual/Manual_Fondo.png" id="1_qbl6e"]
+[ext_resource type="FontFile" uid="uid://co61opcls3s22" path="res://Archivos/Documentos/Fuentes/Gelio Pasteli.ttf" id="2_kr8io"]
+[ext_resource type="Texture2D" uid="uid://cb5tnlexocoa5" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_A.PNG" id="3_jrhbn"]
+[ext_resource type="Texture2D" uid="uid://cn5bdqalngrg6" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_S.PNG" id="4_hy6hi"]
+[ext_resource type="Texture2D" uid="uid://yuhb6y7gr3a1" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_D.PNG" id="5_t5hb5"]
+[ext_resource type="Texture2D" uid="uid://qihqpiqlhuwk" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_W.PNG" id="6_tg8e4"]
+[ext_resource type="Texture2D" uid="uid://biyvyttn7nsdt" path="res://Archivos/Interfaz_Usuario/Manual/Botones/DPad_Arriba.PNG" id="7_xt811"]
+[ext_resource type="Texture2D" uid="uid://d2levxocnu44r" path="res://Archivos/Interfaz_Usuario/Manual/Botones/DPad_Izquierda.PNG" id="8_bvv07"]
+[ext_resource type="Texture2D" uid="uid://dep62y7i341ov" path="res://Archivos/Interfaz_Usuario/Manual/Botones/DPad_Abajo.PNG" id="9_p7dmw"]
+[ext_resource type="Texture2D" uid="uid://bgj8eoank7njf" path="res://Archivos/Interfaz_Usuario/Manual/Botones/DPad_Derecha.PNG" id="10_7a7qv"]
+[ext_resource type="Texture2D" uid="uid://cphyi1sekg8a" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Control_Analogo.PNG" id="11_kkg62"]
+[ext_resource type="Texture2D" uid="uid://bpw753kxmu21k" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_Enter.png" id="12_4ilar"]
+[ext_resource type="Texture2D" uid="uid://d367q2dhawinq" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_PX.PNG" id="13_vfs60"]
+[ext_resource type="Texture2D" uid="uid://duccvh07olkwr" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_XA.PNG" id="14_1n6i8"]
+[ext_resource type="Texture2D" uid="uid://b3ix2tn4s54uo" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_NB.PNG" id="15_p3wqs"]
+[ext_resource type="Texture2D" uid="uid://dtedk8b67nmg6" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_ESC.PNG" id="16_yas07"]
+[ext_resource type="Texture2D" uid="uid://mke3msysj43r" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_PO.PNG" id="17_jh73a"]
+[ext_resource type="Texture2D" uid="uid://ev5gajfcb5es" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_XB.PNG" id="18_nvibl"]
+[ext_resource type="Texture2D" uid="uid://kt0w5py0kgs8" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_NA.PNG" id="19_7fiit"]
+[ext_resource type="Texture2D" uid="uid://bgb47gwcl5st" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_K.PNG" id="20_6c3n4"]
+[ext_resource type="Texture2D" uid="uid://cxsa2m1y5vqpj" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_L.PNG" id="21_fvb0p"]
+[ext_resource type="Texture2D" uid="uid://bj6l7uek4i0vl" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_J.PNG" id="22_tu5m3"]
+[ext_resource type="Texture2D" uid="uid://yfqrpp37a3r5" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_PC.PNG" id="23_yew6d"]
+[ext_resource type="Texture2D" uid="uid://do0u3vduxbj15" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_I.PNG" id="24_k7nbv"]
+[ext_resource type="Texture2D" uid="uid://7rn53meceg86" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_PT.PNG" id="25_y6ks0"]
+[ext_resource type="Texture2D" uid="uid://dddmcopi8g4nx" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_XY.PNG" id="26_20fsm"]
+[ext_resource type="Texture2D" uid="uid://c7yu3pnurw6hx" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_NX.PNG" id="27_uti55"]
+[ext_resource type="Texture2D" uid="uid://cko4oa453xuhs" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_Espacio.PNG" id="28_2tdk0"]
+[ext_resource type="Texture2D" uid="uid://bgo2wnf0c4lv5" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_PPausa.PNG" id="29_ens76"]
+[ext_resource type="Texture2D" uid="uid://ccwv1upu3va1q" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_XPausa.PNG" id="30_12ike"]
+[ext_resource type="Texture2D" uid="uid://oci48llrxnqg" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_N+.PNG" id="31_kfe01"]
+[ext_resource type="Texture2D" uid="uid://dvnvi71gacy67" path="res://Archivos/Interfaz_Usuario/Manual/Hermes_Artefactos.png" id="32_lyc5b"]
+[ext_resource type="Texture2D" uid="uid://cggravxd8e61x" path="res://Archivos/Interfaz_Usuario/Manual/Obolo.png" id="33_22ey5"]
+[ext_resource type="Texture2D" uid="uid://b4uymh6wtio1e" path="res://Archivos/Interfaz_Usuario/Manual/Estatua_Afrodita_Elementos.png" id="34_sofav"]
+[ext_resource type="Texture2D" uid="uid://11mqux33xgyb" path="res://Archivos/Interfaz_Usuario/Manual/Canciones.png" id="36_7hnv6"]
+[ext_resource type="Texture2D" uid="uid://cjxulkqdbnmx5" path="res://Archivos/Interfaz_Usuario/Manual/Pergamino.png" id="36_d1ifw"]
+[ext_resource type="Texture2D" uid="uid://by1t5emx7tcol" path="res://Archivos/Interfaz_Usuario/Manual/Tragedia.png" id="37_8mu7t"]
+[ext_resource type="Texture2D" uid="uid://xjm3q2p2jcn" path="res://Archivos/Interfaz_Usuario/Manual/Chansons.png" id="37_31hx0"]
+[ext_resource type="Texture2D" uid="uid://n2g72lvu1m5m" path="res://Archivos/Interfaz_Usuario/Manual/Songs.png" id="38_kesp5"]
+[ext_resource type="Texture2D" uid="uid://dgxit2uk7mxqc" path="res://Archivos/Interfaz_Usuario/Manual/Articulos.png" id="38_kqoij"]
+[ext_resource type="Texture2D" uid="uid://bbobdetutgpsj" path="res://Archivos/Interfaz_Usuario/Elementos/Boton_Aceptar.png" id="39_4ttc7"]
+[ext_resource type="Texture2D" uid="uid://d0jp33k1y8q42" path="res://Archivos/Interfaz_Usuario/Elementos/Boton_Reinicio.png" id="39_kdtl0"]
+[ext_resource type="Texture2D" uid="uid://dasix15wyh8ay" path="res://Archivos/Interfaz_Usuario/Manual/Tradegy.png" id="41_lidv3"]
+[ext_resource type="Texture2D" uid="uid://clolaf2cinghc" path="res://Archivos/Interfaz_Usuario/Manual/Tradegie.png" id="42_4ky52"]
+[ext_resource type="Texture2D" uid="uid://cshtbp08cwu61" path="res://Archivos/Interfaz_Usuario/Manual/Items.png" id="44_lm66k"]
+[ext_resource type="Texture2D" uid="uid://cqsjetpvcsy3k" path="res://Archivos/Interfaz_Usuario/Manual/Articles.png" id="45_6geb6"]
+[ext_resource type="Texture2D" uid="uid://d04a2itgveac0" path="res://Archivos/Interfaz_Usuario/Elementos/Boton_Siguiente.png" id="48_2p67h"]
+[ext_resource type="Texture2D" uid="uid://7usc7t3rod1s" path="res://Archivos/Interfaz_Usuario/Manual/Salud y Utilizable.png" id="48_qy1p1"]
+[ext_resource type="Texture2D" uid="uid://dop0k2bnq3wr0" path="res://Archivos/Interfaz_Usuario/Elementos/Boton_Cerrar.png" id="49_24bo7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_erv3f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_7hnv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_kesp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_31hx0")
+}],
+"loop": true,
+"name": &"Canciones",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6jqi7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_8mu7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_lidv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_4ky52")
+}],
+"loop": true,
+"name": &"Tragedia",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gl8qf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_kqoij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_lm66k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_6geb6")
+}],
+"loop": true,
+"name": &"Articulos",
+"speed": 5.0
+}]
+
+[node name="Manual" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gku0t")
+metadata/_edit_vertical_guides_ = [299.829, 22.3492]
+metadata/_edit_horizontal_guides_ = [10.3727]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="Fodo" type="TextureRect" parent="CanvasLayer"]
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("1_qbl6e")
+
+[node name="Cerrar" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(302.502, 17.1463)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("49_24bo7")
+
+[node name="Anterior" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(273.345, 162.1)
+rotation = -3.14159
+scale = Vector2(1.4, -1.4)
+texture = ExtResource("48_2p67h")
+
+[node name="Siguiente" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(291.345, 162.1)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("48_2p67h")
+
+[node name="Pagina_1" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Controles" type="Label" parent="CanvasLayer/Pagina_1"]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 73.0
+offset_right = 171.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 12
+text = "CM_1"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Movimiento" type="Label" parent="CanvasLayer/Pagina_1"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 96.0
+offset_right = 45.0
+offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CM_2"
+autowrap_mode = 2
+
+[node name="Tecla_A" type="Sprite2D" parent="CanvasLayer/Pagina_1/Movimiento"]
+position = Vector2(56.8024, 9.15628)
+texture = ExtResource("3_jrhbn")
+
+[node name="Tecla_S" type="Sprite2D" parent="CanvasLayer/Pagina_1/Movimiento"]
+position = Vector2(67.4075, 10.3244)
+scale = Vector2(1.08935, 1.113)
+texture = ExtResource("4_hy6hi")
+
+[node name="Tecla_D" type="Sprite2D" parent="CanvasLayer/Pagina_1/Movimiento"]
+position = Vector2(77.1281, 9.16348)
+texture = ExtResource("5_t5hb5")
+
+[node name="Tecla_W" type="Sprite2D" parent="CanvasLayer/Pagina_1/Movimiento"]
+position = Vector2(46.6556, 9.2117)
+texture = ExtResource("6_tg8e4")
+
+[node name="DPad_Arriba" type="Sprite2D" parent="CanvasLayer/Pagina_1/Movimiento"]
+position = Vector2(89.4726, 9.15579)
+texture = ExtResource("7_xt811")
+
+[node name="DPad_Izquierda" type="Sprite2D" parent="CanvasLayer/Pagina_1/Movimiento"]
+position = Vector2(100.97, 8.18875)
+texture = ExtResource("8_bvv07")
+
+[node name="DPad_Abajo" type="Sprite2D" parent="CanvasLayer/Pagina_1/Movimiento"]
+position = Vector2(111.557, 9.27029)
+texture = ExtResource("9_p7dmw")
+
+[node name="DPad_Derecha" type="Sprite2D" parent="CanvasLayer/Pagina_1/Movimiento"]
+position = Vector2(122.5, 9)
+texture = ExtResource("10_7a7qv")
+
+[node name="Analogo" type="Sprite2D" parent="CanvasLayer/Pagina_1/Movimiento"]
+position = Vector2(135.5, 5)
+texture = ExtResource("11_kkg62")
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_1/Movimiento"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 11.0
+offset_right = 278.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CM_3"
+autowrap_mode = 2
+
+[node name="Interactuar" type="Label" parent="CanvasLayer/Pagina_1"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 135.0
+offset_right = 45.0
+offset_bottom = 147.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+autowrap_mode = 2
+
+[node name="Tecla_Enter" type="Sprite2D" parent="CanvasLayer/Pagina_1/Interactuar"]
+position = Vector2(51.6556, 9.2117)
+texture = ExtResource("12_4ilar")
+
+[node name="Tecla_PX" type="Sprite2D" parent="CanvasLayer/Pagina_1/Interactuar"]
+position = Vector2(63.4075, 8.3244)
+texture = ExtResource("13_vfs60")
+
+[node name="Tecla_XA" type="Sprite2D" parent="CanvasLayer/Pagina_1/Interactuar"]
+position = Vector2(75.1281, 8.16348)
+texture = ExtResource("14_1n6i8")
+
+[node name="Tecla_NB" type="Sprite2D" parent="CanvasLayer/Pagina_1/Interactuar"]
+position = Vector2(87.1281, 8.16348)
+texture = ExtResource("15_p3wqs")
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_1/Interactuar"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 11.0
+offset_right = 278.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CI_2"
+autowrap_mode = 2
+
+[node name="Nota" type="Label" parent="CanvasLayer/Pagina_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.71364
+anchor_top = -0.708666
+anchor_right = 5.01136
+anchor_bottom = -0.608666
+offset_left = 82.5457
+offset_top = 43.3467
+offset_right = 98.5457
+offset_bottom = 55.3467
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 10
+text = "AM_1"
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Pagina_2" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Tocar" type="Label" parent="CanvasLayer/Pagina_2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 17.0
+offset_right = 45.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CT_1"
+autowrap_mode = 2
+
+[node name="Tecla_K" type="Sprite2D" parent="CanvasLayer/Pagina_2/Tocar"]
+position = Vector2(51.6556, 9.2117)
+texture = ExtResource("20_6c3n4")
+
+[node name="Tecla_PX" type="Sprite2D" parent="CanvasLayer/Pagina_2/Tocar"]
+position = Vector2(63.4075, 8.3244)
+texture = ExtResource("13_vfs60")
+
+[node name="Tecla_XA" type="Sprite2D" parent="CanvasLayer/Pagina_2/Tocar"]
+position = Vector2(75.1281, 8.16348)
+texture = ExtResource("14_1n6i8")
+
+[node name="Tecla_NB" type="Sprite2D" parent="CanvasLayer/Pagina_2/Tocar"]
+position = Vector2(87.1281, 8.16348)
+texture = ExtResource("15_p3wqs")
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_2/Tocar"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 11.0
+offset_right = 278.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CT_2"
+autowrap_mode = 2
+
+[node name="Cancelar" type="Label" parent="CanvasLayer/Pagina_2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 141.0
+offset_right = 45.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CD_1"
+autowrap_mode = 2
+
+[node name="Tecla_Enter" type="Sprite2D" parent="CanvasLayer/Pagina_2/Cancelar"]
+position = Vector2(51.6556, 9.2117)
+texture = ExtResource("16_yas07")
+
+[node name="Tecla_PO" type="Sprite2D" parent="CanvasLayer/Pagina_2/Cancelar"]
+position = Vector2(66.4075, 8.3244)
+texture = ExtResource("17_jh73a")
+
+[node name="Tecla_XB" type="Sprite2D" parent="CanvasLayer/Pagina_2/Cancelar"]
+position = Vector2(78.1281, 8.16348)
+texture = ExtResource("18_nvibl")
+
+[node name="Tecla_NA" type="Sprite2D" parent="CanvasLayer/Pagina_2/Cancelar"]
+position = Vector2(90.1281, 8.16348)
+texture = ExtResource("19_7fiit")
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_2/Cancelar"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 11.0
+offset_right = 278.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CD_2"
+autowrap_mode = 2
+
+[node name="Esquivar" type="Label" parent="CanvasLayer/Pagina_2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 53.0
+offset_right = 45.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CE_1"
+autowrap_mode = 2
+
+[node name="Tecla_L" type="Sprite2D" parent="CanvasLayer/Pagina_2/Esquivar"]
+position = Vector2(51.6556, 9.2117)
+texture = ExtResource("21_fvb0p")
+
+[node name="Tecla_PO" type="Sprite2D" parent="CanvasLayer/Pagina_2/Esquivar"]
+position = Vector2(63.4075, 8.3244)
+texture = ExtResource("17_jh73a")
+
+[node name="Tecla_XB" type="Sprite2D" parent="CanvasLayer/Pagina_2/Esquivar"]
+position = Vector2(75.1281, 8.16348)
+texture = ExtResource("18_nvibl")
+
+[node name="Tecla_NA" type="Sprite2D" parent="CanvasLayer/Pagina_2/Esquivar"]
+position = Vector2(87.1281, 8.16348)
+texture = ExtResource("19_7fiit")
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_2/Esquivar"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 11.0
+offset_right = 278.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CE_2"
+autowrap_mode = 2
+
+[node name="Atacar" type="Label" parent="CanvasLayer/Pagina_2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 78.0
+offset_right = 45.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CA_1"
+autowrap_mode = 2
+
+[node name="Tecla_J" type="Sprite2D" parent="CanvasLayer/Pagina_2/Atacar"]
+position = Vector2(51.6556, 9.2117)
+texture = ExtResource("22_tu5m3")
+
+[node name="Tecla_PC" type="Sprite2D" parent="CanvasLayer/Pagina_2/Atacar"]
+position = Vector2(63.4075, 8.3244)
+texture = ExtResource("23_yew6d")
+
+[node name="Tecla_XX" type="Sprite2D" parent="CanvasLayer/Pagina_2/Atacar"]
+position = Vector2(75.1281, 8.16348)
+texture = ExtResource("13_vfs60")
+
+[node name="Tecla_NY" type="Sprite2D" parent="CanvasLayer/Pagina_2/Atacar"]
+position = Vector2(87.1281, 8.16348)
+texture = ExtResource("19_7fiit")
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_2/Atacar"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 11.0
+offset_right = 278.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CA_2"
+autowrap_mode = 2
+
+[node name="Disparar" type="Label" parent="CanvasLayer/Pagina_2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 111.0
+offset_right = 45.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CB_1"
+autowrap_mode = 2
+
+[node name="Tecla_I" type="Sprite2D" parent="CanvasLayer/Pagina_2/Disparar"]
+position = Vector2(51.6556, 9.2117)
+texture = ExtResource("24_k7nbv")
+
+[node name="Tecla_PT" type="Sprite2D" parent="CanvasLayer/Pagina_2/Disparar"]
+position = Vector2(63.4075, 8.3244)
+texture = ExtResource("25_y6ks0")
+
+[node name="Tecla_XY" type="Sprite2D" parent="CanvasLayer/Pagina_2/Disparar"]
+position = Vector2(75.1281, 8.16348)
+texture = ExtResource("26_20fsm")
+
+[node name="Tecla_NX" type="Sprite2D" parent="CanvasLayer/Pagina_2/Disparar"]
+position = Vector2(87.1281, 8.16348)
+texture = ExtResource("27_uti55")
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_2/Disparar"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 11.0
+offset_right = 278.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CB_2"
+autowrap_mode = 2
+
+[node name="Pagina_3" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Inventario" type="Label" parent="CanvasLayer/Pagina_3"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 17.0
+offset_right = 45.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CR_1"
+autowrap_mode = 2
+
+[node name="Tecla_K" type="Sprite2D" parent="CanvasLayer/Pagina_3/Inventario"]
+position = Vector2(51.6556, 9.2117)
+texture = ExtResource("20_6c3n4")
+
+[node name="Tecla_PX" type="Sprite2D" parent="CanvasLayer/Pagina_3/Inventario"]
+position = Vector2(63.4075, 8.3244)
+texture = ExtResource("13_vfs60")
+
+[node name="Tecla_XA" type="Sprite2D" parent="CanvasLayer/Pagina_3/Inventario"]
+position = Vector2(75.1281, 8.16348)
+texture = ExtResource("14_1n6i8")
+
+[node name="Tecla_NB" type="Sprite2D" parent="CanvasLayer/Pagina_3/Inventario"]
+position = Vector2(87.1281, 8.16348)
+texture = ExtResource("15_p3wqs")
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_3/Inventario"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 11.0
+offset_right = 278.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CR_2"
+autowrap_mode = 2
+
+[node name="Pausa" type="Label" parent="CanvasLayer/Pagina_3"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 46.0
+offset_right = 45.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CP_1"
+autowrap_mode = 2
+
+[node name="Tecla_Espacio" type="Sprite2D" parent="CanvasLayer/Pagina_3/Pausa"]
+position = Vector2(31.6556, 9.2117)
+texture = ExtResource("28_2tdk0")
+
+[node name="Tecla_PP" type="Sprite2D" parent="CanvasLayer/Pagina_3/Pausa"]
+position = Vector2(47.4075, 10.3244)
+texture = ExtResource("29_ens76")
+
+[node name="Tecla_XP" type="Sprite2D" parent="CanvasLayer/Pagina_3/Pausa"]
+position = Vector2(57.1281, 7.16348)
+texture = ExtResource("30_12ike")
+
+[node name="Tecla_N+" type="Sprite2D" parent="CanvasLayer/Pagina_3/Pausa"]
+position = Vector2(69.1281, 8.16348)
+texture = ExtResource("31_kfe01")
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_3/Pausa"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 11.0
+offset_right = 278.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "CP_2"
+autowrap_mode = 2
+
+[node name="Sobre el Juego" type="Label" parent="CanvasLayer/Pagina_3"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 74.0
+offset_right = 300.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 12
+text = "SM_1"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Hermes" type="Label" parent="CanvasLayer/Pagina_3"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 98.0
+offset_right = 66.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_2"
+autowrap_mode = 2
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_3/Hermes"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 257.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_3"
+autowrap_mode = 2
+
+[node name="Hermes" type="Sprite2D" parent="CanvasLayer/Pagina_3/Hermes"]
+position = Vector2(-10.9956, 9.1666)
+texture = ExtResource("32_lyc5b")
+
+[node name="Obolos" type="Label" parent="CanvasLayer/Pagina_3"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 135.0
+offset_right = 65.0
+offset_bottom = 147.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_4"
+autowrap_mode = 2
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_3/Obolos"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 258.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_5"
+autowrap_mode = 2
+
+[node name="Obolos" type="Sprite2D" parent="CanvasLayer/Pagina_3/Obolos"]
+position = Vector2(-10.9956, 14.1666)
+scale = Vector2(2, 2)
+texture = ExtResource("33_22ey5")
+
+[node name="Pagina_4" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Estatua_Afrodita" type="Label" parent="CanvasLayer/Pagina_4"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 15.0
+offset_right = 299.0
+offset_bottom = 27.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_6"
+autowrap_mode = 2
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_4/Estatua_Afrodita"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 255.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_7"
+autowrap_mode = 2
+
+[node name="Estatua Afrodita" type="Sprite2D" parent="CanvasLayer/Pagina_4/Estatua_Afrodita"]
+position = Vector2(-12.9956, 9.1666)
+texture = ExtResource("34_sofav")
+
+[node name="Canciones" type="Label" parent="CanvasLayer/Pagina_4"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 54.0
+offset_right = 95.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_8"
+autowrap_mode = 2
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_4/Canciones"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 229.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_9"
+autowrap_mode = 2
+
+[node name="Canciones" type="AnimatedSprite2D" parent="CanvasLayer/Pagina_4/Canciones"]
+modulate = Color(0.760784, 0.760784, 0.760784, 1)
+position = Vector2(-25.9956, 20.1666)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_erv3f")
+animation = &"Canciones"
+
+[node name="Pergaminos" type="Label" parent="CanvasLayer/Pagina_4"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 105.0
+offset_right = 81.0
+offset_bottom = 117.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_10"
+autowrap_mode = 2
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_4/Pergaminos"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 243.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_11"
+autowrap_mode = 2
+
+[node name="PErgamino" type="Sprite2D" parent="CanvasLayer/Pagina_4/Pergaminos"]
+modulate = Color(0.760784, 0.760784, 0.760784, 1)
+position = Vector2(-21.9956, 18.1666)
+scale = Vector2(2, 2)
+texture = ExtResource("36_d1ifw")
+
+[node name="Pagina_5" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Tragedia" type="Label" parent="CanvasLayer/Pagina_5"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 15.0
+offset_right = 95.0
+offset_bottom = 27.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_12"
+autowrap_mode = 2
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_5/Tragedia"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 229.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_13"
+autowrap_mode = 2
+
+[node name="Tragedia" type="AnimatedSprite2D" parent="CanvasLayer/Pagina_5/Tragedia"]
+modulate = Color(0.760784, 0.760784, 0.760784, 1)
+position = Vector2(-25.9956, 20.1666)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_6jqi7")
+animation = &"Tragedia"
+
+[node name="Articulos" type="Label" parent="CanvasLayer/Pagina_5"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 67.0
+offset_right = 95.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_14"
+autowrap_mode = 2
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_5/Articulos"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 229.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_15"
+autowrap_mode = 2
+
+[node name="Articulos" type="AnimatedSprite2D" parent="CanvasLayer/Pagina_5/Articulos"]
+modulate = Color(0.760784, 0.760784, 0.760784, 1)
+position = Vector2(-25.9956, 20.1666)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_gl8qf")
+animation = &"Articulos"
+
+[node name="Salud_y_Reutilizable" type="Label" parent="CanvasLayer/Pagina_5"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 121.0
+offset_right = 159.0
+offset_bottom = 133.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_16"
+autowrap_mode = 2
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_5/Salud_y_Reutilizable"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 229.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_17"
+autowrap_mode = 2
+
+[node name="Salud_y_Reutilizable" type="Sprite2D" parent="CanvasLayer/Pagina_5/Salud_y_Reutilizable"]
+modulate = Color(0.760784, 0.760784, 0.760784, 1)
+position = Vector2(-25.9956, 15.1666)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("48_qy1p1")
+
+[node name="Pagina_6" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Preferencias" type="Label" parent="CanvasLayer/Pagina_6"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 15.0
+offset_right = 299.0
+offset_bottom = 27.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_18"
+autowrap_mode = 2
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_6/Preferencias"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 255.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_19"
+autowrap_mode = 2
+
+[node name="Boton_Aceptar" type="Sprite2D" parent="CanvasLayer/Pagina_6/Preferencias"]
+position = Vector2(-11.9719, 10.269)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("39_4ttc7")
+
+[node name="Mapa_de_Teclas" type="Label" parent="CanvasLayer/Pagina_6"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 41.0
+offset_right = 299.0
+offset_bottom = 53.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_20"
+autowrap_mode = 2
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_6/Mapa_de_Teclas"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 255.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_21"
+autowrap_mode = 2
+
+[node name="Mapa_de_Teclas" type="Sprite2D" parent="CanvasLayer/Pagina_6/Mapa_de_Teclas"]
+position = Vector2(-11.9719, 23.269)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("39_kdtl0")
+
+[node name="Anterior_Siguiente" type="Label" parent="CanvasLayer/Pagina_6"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 104.0
+offset_right = 305.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_22"
+autowrap_mode = 2
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_6/Anterior_Siguiente"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 255.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_23"
+autowrap_mode = 2
+
+[node name="Anterior_Siguiente" type="Sprite2D" parent="CanvasLayer/Pagina_6/Anterior_Siguiente"]
+position = Vector2(-51.2142, -81.1276)
+
+[node name="Anterior" type="Sprite2D" parent="CanvasLayer/Pagina_6/Anterior_Siguiente/Anterior_Siguiente"]
+position = Vector2(30.0339, 101.448)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("48_2p67h")
+
+[node name="Siguiente" type="Sprite2D" parent="CanvasLayer/Pagina_6/Anterior_Siguiente/Anterior_Siguiente"]
+position = Vector2(43.0808, 101.406)
+texture = ExtResource("48_2p67h")
+
+[node name="Pagina_7" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Cerrar" type="Label" parent="CanvasLayer/Pagina_7"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 15.0
+offset_right = 299.0
+offset_bottom = 27.0
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_24"
+autowrap_mode = 2
+
+[node name="Texto" type="Label" parent="CanvasLayer/Pagina_7/Cerrar"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 9.0
+offset_right = 255.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
+theme_override_fonts/font = ExtResource("2_kr8io")
+theme_override_font_sizes/font_size = 8
+text = "SM_25"
+autowrap_mode = 2
+
+[node name="Cerrar" type="Sprite2D" parent="CanvasLayer/Pagina_7/Cerrar"]
+position = Vector2(-11.9719, 15.269)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("49_24bo7")

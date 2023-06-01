@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0rccqho46t4m"]
+
+[ext_resource type="Script" path="res://Archivos/Generales/Estadisticas.gd" id="1_x2cu8"]
+
+[node name="Orfeo_Estadisticas" type="Node"]
+process_mode = 3
+script = ExtResource("1_x2cu8")

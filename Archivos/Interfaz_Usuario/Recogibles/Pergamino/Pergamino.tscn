@@ -1,0 +1,135 @@
+[gd_scene load_steps=19 format=3 uid="uid://cypkvio3vg80h"]
+
+[ext_resource type="Texture2D" uid="uid://2ahabn2cxa3f" path="res://Archivos/Interfaz_Usuario/Recogibles/Pergamino/Pergamino_Sprite_Sheet.png" id="1_j58ya"]
+[ext_resource type="Texture2D" uid="uid://bj3qs8wasrh0l" path="res://Archivos/Sombra/Sombra_Sprite_Sheet.png" id="2_77erp"]
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Recogibles/Pergamino/Pergamino.gd" id="2_acdqn"]
+[ext_resource type="PackedScene" uid="uid://bjf855h26o70t" path="res://Archivos/Generales/Cajas_Colision/Zona_Detectar.tscn" id="3_idwv2"]
+[ext_resource type="AudioStream" uid="uid://ci0wcd5vsmdg" path="res://Archivos/Musica/Efectos/Canciones/Aletheia.wav" id="5_qh4tv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbwsh"]
+atlas = ExtResource("1_j58ya")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcjhn"]
+atlas = ExtResource("1_j58ya")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lc88"]
+atlas = ExtResource("1_j58ya")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo54b"]
+atlas = ExtResource("1_j58ya")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ht2j7"]
+atlas = ExtResource("1_j58ya")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhg28"]
+atlas = ExtResource("1_j58ya")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvegw"]
+atlas = ExtResource("1_j58ya")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ex0ri"]
+atlas = ExtResource("1_j58ya")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooxd8"]
+atlas = ExtResource("1_j58ya")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gaen"]
+atlas = ExtResource("1_j58ya")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wvtex"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbwsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcjhn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lc88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eo54b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ht2j7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhg28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvegw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ex0ri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ooxd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gaen")
+}],
+"loop": true,
+"name": &"Animacion",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lvobf"]
+radius = 3.0
+height = 10.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2vj78"]
+radius = 31.2574
+
+[node name="Pergamino" type="AnimatedSprite2D"]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_wvtex")
+animation = &"Animacion"
+autoplay = "Animacion"
+frame_progress = 0.0679065
+script = ExtResource("2_acdqn")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 12)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_lvobf")
+
+[node name="Sombra" type="Sprite2D" parent="."]
+texture = ExtResource("2_77erp")
+hframes = 8
+
+[node name="Zona_Detectar" parent="." instance=ExtResource("3_idwv2")]
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Zona_Detectar" index="0"]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_2vj78")
+debug_color = Color(0, 0, 0, 0.294118)
+
+[node name="Activar_Area" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="Aletehia" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("5_qh4tv")
+volume_db = 5.0
+bus = &"Canciones"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Activar_Area" to="." method="_on_activar_area_timeout"]
+
+[editable path="Zona_Detectar"]

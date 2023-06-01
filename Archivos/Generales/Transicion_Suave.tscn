@@ -1,0 +1,148 @@
+[gd_scene load_steps=8 format=3 uid="uid://u6rd41hr10rp"]
+
+[ext_resource type="FontFile" uid="uid://co61opcls3s22" path="res://Archivos/Documentos/Fuentes/Gelio Pasteli.ttf" id="2_e3nf2"]
+[ext_resource type="Script" path="res://Archivos/Generales/Transicion_Suave.gd" id="2_jequj"]
+
+[sub_resource type="Animation" id="Animation_bbwqa"]
+resource_name = "Historia_Inicial"
+length = 16.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 16),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"Panel_Visibile"
+}, {
+"args": [],
+"method": &"Cambiar_Escena"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Intro:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 16),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Intro:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 15.1, 16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_n4ho8"]
+resource_name = "Iniciar_Escena"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pbj5y"]
+resource_name = "Transicion"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"Panel_Visibile"
+}, {
+"args": [],
+"method": &"Cambiar_Escena"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w8vl2"]
+_data = {
+"Historia_Inicial": SubResource("Animation_bbwqa"),
+"Iniciar_Escena": SubResource("Animation_n4ho8"),
+"Transicion": SubResource("Animation_pbj5y")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eib5r"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Transicion_Suave" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("2_jequj")
+metadata/_edit_vertical_guides_ = [20.4914, 300.152]
+metadata/_edit_horizontal_guides_ = [20.372, 159.798]
+
+[node name="Transicion" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_w8vl2")
+}
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_right = 320.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_eib5r")
+
+[node name="Intro" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("2_e3nf2")
+theme_override_font_sizes/font_size = 13
+text = "PI_1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

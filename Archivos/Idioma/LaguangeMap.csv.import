@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cbyuhhfgpojp2"
+
+[deps]
+
+files=["res://Archivos/Idioma/LaguangeMap.es.translation", "res://Archivos/Idioma/LaguangeMap.en.translation", "res://Archivos/Idioma/LaguangeMap.fr.translation", "res://Archivos/Idioma/LaguangeMap.gr.translation"]
+
+source_file="res://Archivos/Idioma/LaguangeMap.csv"
+dest_files=["res://Archivos/Idioma/LaguangeMap.es.translation", "res://Archivos/Idioma/LaguangeMap.en.translation", "res://Archivos/Idioma/LaguangeMap.fr.translation", "res://Archivos/Idioma/LaguangeMap.gr.translation"]
+
+[params]
+
+compress=true
+delimiter=0

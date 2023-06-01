@@ -1,0 +1,516 @@
+[gd_scene load_steps=35 format=3 uid="uid://cd17fdsrm537v"]
+
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Principal/Menu_Inicio.gd" id="1_secsu"]
+[ext_resource type="Texture2D" uid="uid://dfr2h6sfwfget" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Principal/Menu_Inicio_Sprite_Sheet.png" id="2_u3nf1"]
+[ext_resource type="FontFile" uid="uid://co61opcls3s22" path="res://Archivos/Documentos/Fuentes/Gelio Pasteli.ttf" id="3_tu15b"]
+[ext_resource type="Texture2D" uid="uid://c0blbo7x64fsv" path="res://Archivos/Interfaz_Usuario/Manual/Pantalla_Inicio.png" id="4_7sico"]
+[ext_resource type="Texture2D" uid="uid://cb5tnlexocoa5" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_A.PNG" id="4_h0o2g"]
+[ext_resource type="PackedScene" uid="uid://u6rd41hr10rp" path="res://Archivos/Generales/Transicion_Suave.tscn" id="4_h5swk"]
+[ext_resource type="Texture2D" uid="uid://cn5bdqalngrg6" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_S.PNG" id="5_gx7si"]
+[ext_resource type="Texture2D" uid="uid://yuhb6y7gr3a1" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_D.PNG" id="6_v8ppp"]
+[ext_resource type="Texture2D" uid="uid://qihqpiqlhuwk" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_W.PNG" id="7_dfrab"]
+[ext_resource type="Texture2D" uid="uid://biyvyttn7nsdt" path="res://Archivos/Interfaz_Usuario/Manual/Botones/DPad_Arriba.PNG" id="8_0jdre"]
+[ext_resource type="Texture2D" uid="uid://d2levxocnu44r" path="res://Archivos/Interfaz_Usuario/Manual/Botones/DPad_Izquierda.PNG" id="9_qcpt7"]
+[ext_resource type="Texture2D" uid="uid://dep62y7i341ov" path="res://Archivos/Interfaz_Usuario/Manual/Botones/DPad_Abajo.PNG" id="10_l2ym2"]
+[ext_resource type="Texture2D" uid="uid://bgj8eoank7njf" path="res://Archivos/Interfaz_Usuario/Manual/Botones/DPad_Derecha.PNG" id="11_uxkjb"]
+[ext_resource type="Texture2D" uid="uid://bpw753kxmu21k" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_Enter.png" id="12_ohfxo"]
+[ext_resource type="Texture2D" uid="uid://d367q2dhawinq" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_PX.PNG" id="13_3rdhj"]
+[ext_resource type="Texture2D" uid="uid://duccvh07olkwr" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_XA.PNG" id="14_3i8tj"]
+[ext_resource type="Texture2D" uid="uid://b3ix2tn4s54uo" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_NB.PNG" id="15_fi4y0"]
+[ext_resource type="Texture2D" uid="uid://dtedk8b67nmg6" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Tecla_ESC.PNG" id="16_pfgkk"]
+[ext_resource type="Texture2D" uid="uid://mke3msysj43r" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_PO.PNG" id="17_rytuy"]
+[ext_resource type="Texture2D" uid="uid://ev5gajfcb5es" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_XB.PNG" id="18_od2cb"]
+[ext_resource type="Texture2D" uid="uid://kt0w5py0kgs8" path="res://Archivos/Interfaz_Usuario/Manual/Botones/Boton_NA.PNG" id="19_h7de5"]
+[ext_resource type="AudioStream" uid="uid://bllavy6vwv2y2" path="res://Archivos/Musica/Canciones/Menus/L'Euridice.wav" id="22_xjykk"]
+
+[sub_resource type="Animation" id="Animation_7kstj"]
+resource_name = "Aviso_Inicio"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Avisio_Inicio:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Avisio_Inicio:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3.5, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Iniciar_Primavera"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_looxy"]
+resource_name = "Otoño"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1, 1.33333, 1.66667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15, 16, 17]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Botones_Visibles"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_7ced1"]
+resource_name = "Primavera"
+length = 2.0
+step = 0.333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1, 1.33333, 1.66667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Iniciar_Transicion"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_v3sny"]
+resource_name = "Transicion"
+length = 2.0
+step = 0.333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1, 1.33333, 1.66667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10, 11]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Iniciar_Otoño"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wdlt2"]
+_data = {
+"Aviso_Inicio": SubResource("Animation_7kstj"),
+"Otoño": SubResource("Animation_looxy"),
+"Primavera": SubResource("Animation_7ced1"),
+"Transicion": SubResource("Animation_v3sny")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f5hj5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_px14s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r3kmy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5dm5p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ab5k2"]
+
+[sub_resource type="Gradient" id="Gradient_saey3"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_n5icw"]
+gradient = SubResource("Gradient_saey3")
+
+[node name="Menu_Inicio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_secsu")
+
+[node name="Menu_Inicio" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+texture = ExtResource("2_u3nf1")
+hframes = 18
+
+[node name="Menu_Inicio_Ani_play" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Menu_Inicio")
+libraries = {
+"": SubResource("AnimationLibrary_wdlt2")
+}
+
+[node name="Bloqueo" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="Menu_Principal" type="Control" parent="."]
+anchors_preset = 0
+
+[node name="Continuar" type="Button" parent="Menu_Principal"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 104.0
+offset_right = 64.0
+offset_bottom = 123.0
+focus_neighbor_bottom = NodePath("../Partir")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tu15b")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f5hj5")
+button_mask = 0
+text = "MI_1"
+flat = true
+alignment = 0
+
+[node name="Partir" type="Button" parent="Menu_Principal"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 116.0
+offset_right = 65.0
+offset_bottom = 135.0
+focus_neighbor_top = NodePath("../Continuar")
+focus_neighbor_bottom = NodePath("../Opciones")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tu15b")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/focus = SubResource("StyleBoxEmpty_px14s")
+button_mask = 0
+text = "MI_2"
+flat = true
+alignment = 0
+
+[node name="Opciones" type="Button" parent="Menu_Principal"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 127.0
+offset_right = 65.0
+offset_bottom = 146.0
+focus_neighbor_top = NodePath("../Partir")
+focus_neighbor_bottom = NodePath("../Manual")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tu15b")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r3kmy")
+button_mask = 0
+text = "MI_3"
+flat = true
+alignment = 0
+
+[node name="Manual" type="Button" parent="Menu_Principal"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 138.0
+offset_right = 65.0
+offset_bottom = 157.0
+focus_neighbor_top = NodePath("../Opciones")
+focus_neighbor_bottom = NodePath("../Creditos")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tu15b")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5dm5p")
+button_mask = 0
+text = "MI_4"
+flat = true
+alignment = 0
+
+[node name="Creditos" type="Button" parent="Menu_Principal"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 148.0
+offset_right = 65.0
+offset_bottom = 167.0
+focus_neighbor_top = NodePath("../Manual")
+focus_neighbor_bottom = NodePath("../Salir")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tu15b")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5dm5p")
+button_mask = 0
+text = "MI_5"
+flat = true
+alignment = 0
+
+[node name="Salir" type="Button" parent="Menu_Principal"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 159.0
+offset_right = 66.0
+offset_bottom = 178.0
+focus_neighbor_top = NodePath("../Creditos")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tu15b")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ab5k2")
+button_mask = 0
+text = "MI_6"
+flat = true
+alignment = 0
+
+[node name="Avisio_Inicio" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0.0266666)
+anchors_preset = 0
+
+[node name="Panel" type="TextureRect" parent="Avisio_Inicio"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 321.0
+offset_bottom = 181.0
+texture = SubResource("GradientTexture1D_n5icw")
+
+[node name="Fondo" type="TextureRect" parent="Avisio_Inicio"]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("4_7sico")
+
+[node name="Texto" type="Control" parent="Avisio_Inicio"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 85.723
+offset_top = 70.4026
+offset_right = 125.723
+offset_bottom = 93.4026
+
+[node name="Determinada" type="Label" parent="Avisio_Inicio/Texto"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.79785
+anchor_top = -0.706583
+anchor_right = 0.20215
+anchor_bottom = -0.619626
+offset_left = 122.914
+offset_top = 1.25141
+offset_right = 138.914
+offset_bottom = 13.2514
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("3_tu15b")
+theme_override_font_sizes/font_size = 10
+text = "AI_6"
+horizontal_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Usa" type="Label" parent="Avisio_Inicio/Texto"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 0.75
+offset_right = 36.0
+offset_bottom = 12.75
+theme_override_fonts/font = ExtResource("3_tu15b")
+theme_override_font_sizes/font_size = 8
+text = "AI_1"
+horizontal_alignment = 2
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Tecla_A" type="Sprite2D" parent="Avisio_Inicio/Texto/Usa"]
+position = Vector2(44.8024, 9.15628)
+texture = ExtResource("4_h0o2g")
+
+[node name="Tecla_S" type="Sprite2D" parent="Avisio_Inicio/Texto/Usa"]
+position = Vector2(55.4075, 10.3244)
+scale = Vector2(1.08935, 1.113)
+texture = ExtResource("5_gx7si")
+
+[node name="Tecla_D" type="Sprite2D" parent="Avisio_Inicio/Texto/Usa"]
+position = Vector2(65.1281, 9.16349)
+texture = ExtResource("6_v8ppp")
+
+[node name="Tecla_W" type="Sprite2D" parent="Avisio_Inicio/Texto/Usa"]
+position = Vector2(34.6556, 9.2117)
+texture = ExtResource("7_dfrab")
+
+[node name="DPad_Arriba" type="Sprite2D" parent="Avisio_Inicio/Texto/Usa"]
+position = Vector2(74.4726, 9.15579)
+texture = ExtResource("8_0jdre")
+
+[node name="DPad_Izquierda" type="Sprite2D" parent="Avisio_Inicio/Texto/Usa"]
+position = Vector2(85.9697, 8.18875)
+texture = ExtResource("9_qcpt7")
+
+[node name="DPad_Abajo" type="Sprite2D" parent="Avisio_Inicio/Texto/Usa"]
+position = Vector2(96.5571, 9.2703)
+texture = ExtResource("10_l2ym2")
+
+[node name="DPad_Derecha" type="Sprite2D" parent="Avisio_Inicio/Texto/Usa"]
+position = Vector2(107.5, 9)
+texture = ExtResource("11_uxkjb")
+
+[node name="Para" type="Label" parent="Avisio_Inicio/Texto"]
+layout_mode = 0
+offset_left = 122.914
+offset_top = 1.25141
+offset_right = 138.914
+offset_bottom = 13.2514
+theme_override_fonts/font = ExtResource("3_tu15b")
+theme_override_font_sizes/font_size = 8
+text = "AI_2"
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Movimiento" type="Label" parent="Avisio_Inicio/Texto"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 13.0
+offset_right = 145.0
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("3_tu15b")
+theme_override_font_sizes/font_size = 8
+text = "AI_3"
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Interactuar" type="Label" parent="Avisio_Inicio/Texto"]
+layout_mode = 0
+offset_left = 75.0861
+offset_top = 28.0224
+offset_right = 164.086
+offset_bottom = 40.0224
+theme_override_fonts/font = ExtResource("3_tu15b")
+theme_override_font_sizes/font_size = 8
+text = "AI_4"
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Tecla_K" type="Sprite2D" parent="Avisio_Inicio/Texto/Interactuar"]
+position = Vector2(-38.6269, 9.15961)
+texture = ExtResource("12_ohfxo")
+
+[node name="Boton_PX" type="Sprite2D" parent="Avisio_Inicio/Texto/Interactuar"]
+position = Vector2(-27.5982, 8.66354)
+texture = ExtResource("13_3rdhj")
+
+[node name="Boton_XA" type="Sprite2D" parent="Avisio_Inicio/Texto/Interactuar"]
+position = Vector2(-15.6232, 8.5516)
+texture = ExtResource("14_3i8tj")
+
+[node name="Boton_NB" type="Sprite2D" parent="Avisio_Inicio/Texto/Interactuar"]
+position = Vector2(-3.14931, 8.61543)
+texture = ExtResource("15_fi4y0")
+
+[node name="Retroceder" type="Label" parent="Avisio_Inicio/Texto"]
+layout_mode = 0
+offset_left = 49.877
+offset_top = 42.5527
+offset_right = 230.877
+offset_bottom = 54.5527
+theme_override_fonts/font = ExtResource("3_tu15b")
+theme_override_font_sizes/font_size = 8
+text = "AI_5"
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Tecla_ESC" type="Sprite2D" parent="Avisio_Inicio/Texto/Retroceder"]
+position = Vector2(-38.7865, 9.36039)
+texture = ExtResource("16_pfgkk")
+
+[node name="Boton_PO" type="Sprite2D" parent="Avisio_Inicio/Texto/Retroceder"]
+position = Vector2(-25.889, 9.10739)
+texture = ExtResource("17_rytuy")
+
+[node name="Boton_XB" type="Sprite2D" parent="Avisio_Inicio/Texto/Retroceder"]
+position = Vector2(-14.0283, 9.11629)
+texture = ExtResource("18_od2cb")
+
+[node name="Boton_NA" type="Sprite2D" parent="Avisio_Inicio/Texto/Retroceder"]
+position = Vector2(-2.3058, 9.23254)
+texture = ExtResource("19_h7de5")
+
+[node name="Transicion_Suave" parent="." instance=ExtResource("4_h5swk")]
+visible = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 9.5
+one_shot = true
+autostart = true
+
+[node name="LEuridice" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("22_xjykk")
+bus = &"Inicio"
+
+[connection signal="button_down" from="Menu_Principal/Continuar" to="." method="_on_continuar_button_down"]
+[connection signal="button_down" from="Menu_Principal/Partir" to="." method="_on_partir_button_down"]
+[connection signal="button_down" from="Menu_Principal/Opciones" to="." method="_on_opciones_button_down"]
+[connection signal="button_down" from="Menu_Principal/Manual" to="." method="_on_manual_button_down"]
+[connection signal="button_down" from="Menu_Principal/Creditos" to="." method="_on_creditos_button_down"]
+[connection signal="button_down" from="Menu_Principal/Salir" to="." method="_on_salir_button_down"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

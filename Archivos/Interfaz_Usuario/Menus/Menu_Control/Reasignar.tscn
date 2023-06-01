@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://cv0je31w182p3"]
+
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Control/Reasignar.gd" id="1_8qiiq"]
+[ext_resource type="FontFile" uid="uid://co61opcls3s22" path="res://Archivos/Documentos/Fuentes/Gelio Pasteli.ttf" id="1_i5icn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hmpit"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bss3g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t68xg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lu8kr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hy0cx"]
+
+[node name="Reasignar" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.745098, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.745098, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.745098, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_i5icn")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hmpit")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bss3g")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t68xg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lu8kr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hy0cx")
+toggle_mode = true
+alignment = 0
+icon_alignment = 1
+script = ExtResource("1_8qiiq")

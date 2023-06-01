@@ -1,0 +1,1152 @@
+[gd_scene load_steps=70 format=3 uid="uid://dr0k11n2v2om6"]
+
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Opciones/Menu_Opciones.gd" id="1_2teg7"]
+[ext_resource type="Texture2D" uid="uid://dggfi245hj3ia" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Opciones/Menu_Fondo_Sprite_Sheet.png" id="1_lj4qn"]
+[ext_resource type="Texture2D" uid="uid://chfgg4rdga3u4" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Opciones/Scroll_Bar/Boton.png" id="4_fp2ig"]
+[ext_resource type="Texture2D" uid="uid://bbobdetutgpsj" path="res://Archivos/Interfaz_Usuario/Elementos/Boton_Aceptar.png" id="4_n7y8u"]
+[ext_resource type="FontFile" uid="uid://co61opcls3s22" path="res://Archivos/Documentos/Fuentes/Gelio Pasteli.ttf" id="4_opwe2"]
+[ext_resource type="Texture2D" uid="uid://cqfjbjh25hg3n" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Control/Control_Map.png" id="6_ci5rw"]
+[ext_resource type="Texture2D" uid="uid://cnmjk4hkug4lm" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Control/Opciones_Control_Sprite_Sheet.png" id="6_ga8b6"]
+[ext_resource type="Texture2D" uid="uid://rkhcybvqfnhb" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Opciones/Scroll_Bar/Barra_Entera.png" id="7_oe2rt"]
+[ext_resource type="PackedScene" uid="uid://cv0je31w182p3" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Control/Reasignar.tscn" id="7_qtpxm"]
+[ext_resource type="Texture2D" uid="uid://d0jp33k1y8q42" path="res://Archivos/Interfaz_Usuario/Elementos/Boton_Reinicio.png" id="8_xsyo6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2hbss"]
+texture = ExtResource("4_n7y8u")
+modulate_color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jkb8t"]
+texture = ExtResource("4_n7y8u")
+modulate_color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l7htj"]
+texture = ExtResource("4_n7y8u")
+modulate_color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2g331"]
+texture = ExtResource("4_n7y8u")
+modulate_color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_okef5"]
+texture = ExtResource("4_n7y8u")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iiqam"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dp57p"]
+texture = ExtResource("7_oe2rt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lotcg"]
+texture = ExtResource("7_oe2rt")
+modulate_color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2m2x8"]
+texture = ExtResource("4_fp2ig")
+texture_margin_left = 9.0
+texture_margin_top = 8.0
+region_rect = Rect2(21, 0, 9, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rn0qm"]
+texture = ExtResource("4_fp2ig")
+texture_margin_left = 9.0
+texture_margin_top = 8.0
+region_rect = Rect2(21, 0, 9, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7p6ky"]
+texture = ExtResource("4_fp2ig")
+texture_margin_left = 9.0
+texture_margin_top = 8.0
+region_rect = Rect2(21, 0, 9, 8)
+
+[sub_resource type="ImageTexture" id="ImageTexture_v0oie"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujfgn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bokcf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dvv7q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8anpj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jbap5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_44n4n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5bwbx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mmtbq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yuopc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_13x78"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_x8801"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nmupt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x66rj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1kmu5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_057u3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hd4mr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q4b5g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4fdbc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2q7qs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0r3ff"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_jnmqd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7116a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ovayu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s0qdw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0xh6l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7i14r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_duixm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bacb7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2y3t6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ejpy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_udqnl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0p5h1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ne0qj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kork3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dd4p5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfmt8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g56gh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opuix"]
+texture = ExtResource("8_xsyo6")
+modulate_color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_02ipo"]
+texture = ExtResource("8_xsyo6")
+modulate_color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7scyj"]
+texture = ExtResource("8_xsyo6")
+modulate_color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_01syx"]
+texture = ExtResource("8_xsyo6")
+modulate_color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tk31j"]
+texture = ExtResource("8_xsyo6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8lb82"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m20pf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_40g4o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2spny"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rik6f"]
+
+[node name="Menu_Opciones" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_2teg7")
+metadata/_edit_vertical_guides_ = [159.631]
+metadata/_edit_horizontal_guides_ = [66.2529]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pantalla_Negra" type="Panel" parent="CanvasLayer"]
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="Fondo" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(160, 90)
+texture = ExtResource("1_lj4qn")
+hframes = 4
+frame = 3
+
+[node name="Opciones" type="Label" parent="CanvasLayer"]
+offset_left = 140.0
+offset_top = 15.0
+offset_right = 175.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 20
+text = "MI_3"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Aceptar" type="Button" parent="CanvasLayer"]
+offset_left = 279.0
+offset_top = 16.0
+offset_right = 299.0
+offset_bottom = 36.0
+focus_neighbor_bottom = NodePath("../Generales")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_2hbss")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jkb8t")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_l7htj")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2g331")
+theme_override_styles/focus = SubResource("StyleBoxTexture_okef5")
+button_mask = 0
+
+[node name="Generales" type="Button" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 39.0
+offset_right = 85.0
+offset_bottom = 63.0
+focus_neighbor_top = NodePath("../Aceptar")
+focus_neighbor_right = NodePath("../Video")
+focus_neighbor_bottom = NodePath("../Menu_Generales/Lesion_Recibida/Multiplicador_Lesion")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iiqam")
+button_mask = 0
+text = "MO_1"
+flat = true
+
+[node name="Menu_Generales" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_top = 3.0
+offset_bottom = 3.0
+mouse_filter = 2
+
+[node name="Lesion_Recibida" type="Label" parent="CanvasLayer/Menu_Generales"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 67.0
+offset_right = 105.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OG_1"
+
+[node name="Multiplicador_Lesion" type="HScrollBar" parent="CanvasLayer/Menu_Generales/Lesion_Recibida"]
+layout_mode = 0
+offset_left = 167.794
+offset_top = 1.0412
+offset_right = 218.794
+offset_bottom = 9.0412
+scale = Vector2(1, 0.84)
+focus_neighbor_top = NodePath("../../../Generales")
+focus_neighbor_bottom = NodePath("../../Idioma/Idioma")
+focus_mode = 2
+mouse_filter = 2
+theme_override_styles/scroll = SubResource("StyleBoxTexture_dp57p")
+theme_override_styles/scroll_focus = SubResource("StyleBoxTexture_lotcg")
+theme_override_styles/grabber = SubResource("StyleBoxTexture_2m2x8")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxTexture_rn0qm")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_7p6ky")
+max_value = 2.0
+step = 1.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Menu_Generales/Lesion_Recibida/Multiplicador_Lesion"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 8.0
+offset_right = 75.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 5
+text = "x0.5          x1          x2"
+
+[node name="Idioma" type="Label" parent="CanvasLayer/Menu_Generales"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 80.5
+offset_right = 72.0
+offset_bottom = 97.5
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OG_2"
+
+[node name="Idioma" type="OptionButton" parent="CanvasLayer/Menu_Generales/Idioma"]
+layout_mode = 0
+offset_left = 109.0
+offset_right = 215.0
+offset_bottom = 11.0
+focus_neighbor_top = NodePath("../../Lesion_Recibida/Multiplicador_Lesion")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+theme_override_icons/arrow = SubResource("ImageTexture_v0oie")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ujfgn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bokcf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dvv7q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8anpj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jbap5")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_44n4n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5bwbx")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_mmtbq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_yuopc")
+toggle_mode = false
+button_mask = 0
+flat = true
+alignment = 2
+item_count = 3
+selected = 0
+fit_to_longest_item = false
+popup/item_0/text = "OL_1"
+popup/item_0/id = 0
+popup/item_1/text = "OL_2"
+popup/item_1/id = 1
+popup/item_2/text = "OL_3"
+popup/item_2/id = 2
+
+[node name="Video" type="Button" parent="CanvasLayer"]
+offset_left = 100.331
+offset_top = 35.0
+offset_right = 152.331
+offset_bottom = 66.0
+focus_neighbor_left = NodePath("../Generales")
+focus_neighbor_top = NodePath("../Aceptar")
+focus_neighbor_right = NodePath("../Audio")
+focus_neighbor_bottom = NodePath("../Menu_Video/Modo_Pantalla/Opciones_Pantalla")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_13x78")
+button_mask = 0
+text = "MO_2"
+flat = true
+
+[node name="Menu_Video" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Modo_Pantalla" type="Label" parent="CanvasLayer/Menu_Video"]
+layout_mode = 0
+offset_left = 51.0398
+offset_top = 70.108
+offset_right = 122.04
+offset_bottom = 84.108
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OV_1"
+
+[node name="Opciones_Pantalla" type="OptionButton" parent="CanvasLayer/Menu_Video/Modo_Pantalla"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 4.0
+offset_right = 223.0
+offset_bottom = 16.0
+focus_neighbor_top = NodePath("../../../Video")
+focus_neighbor_bottom = NodePath("../../Resolucion/Opciones_Resolucion")
+focus_mode = 0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+theme_override_icons/arrow = SubResource("ImageTexture_x8801")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nmupt")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x66rj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1kmu5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_057u3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hd4mr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_q4b5g")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_4fdbc")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_2q7qs")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_0r3ff")
+button_mask = 0
+flat = true
+alignment = 2
+icon_alignment = 2
+item_count = 3
+selected = 0
+fit_to_longest_item = false
+popup/item_0/text = "OP_1"
+popup/item_0/id = 0
+popup/item_1/text = "OP_2"
+popup/item_1/id = 1
+popup/item_2/text = "OP_3"
+popup/item_2/id = 2
+
+[node name="Resolucion" type="Label" parent="CanvasLayer/Menu_Video"]
+layout_mode = 0
+offset_left = 51.2696
+offset_top = 83.7373
+offset_right = 94.2696
+offset_bottom = 97.7373
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OV_2"
+
+[node name="Opciones_Resolucion" type="OptionButton" parent="CanvasLayer/Menu_Video/Resolucion"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2.0
+offset_right = 224.0
+offset_bottom = 14.0
+focus_neighbor_top = NodePath("../../Modo_Pantalla/Opciones_Pantalla")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+theme_override_icons/arrow = SubResource("ImageTexture_jnmqd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7116a")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ovayu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_s0qdw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0xh6l")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7i14r")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_duixm")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_bacb7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_2y3t6")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_6ejpy")
+button_mask = 0
+flat = true
+alignment = 2
+icon_alignment = 2
+item_count = 6
+selected = 3
+fit_to_longest_item = false
+popup/item_0/text = "320x180"
+popup/item_0/id = 0
+popup/item_1/text = "640x360"
+popup/item_1/id = 1
+popup/item_2/text = "960x540"
+popup/item_2/id = 2
+popup/item_3/text = "1280x720"
+popup/item_3/id = 3
+popup/item_4/text = "1600x900"
+popup/item_4/id = 4
+popup/item_5/text = "--"
+popup/item_5/id = 5
+
+[node name="Audio" type="Button" parent="CanvasLayer"]
+offset_left = 169.816
+offset_top = 38.1276
+offset_right = 210.816
+offset_bottom = 62.1276
+focus_neighbor_left = NodePath("../Video")
+focus_neighbor_top = NodePath("../Aceptar")
+focus_neighbor_right = NodePath("../Controles")
+focus_neighbor_bottom = NodePath("../Menu_Audio/Sonido_Global/Sonido_Global")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_udqnl")
+button_mask = 0
+text = "MO_3"
+flat = true
+
+[node name="Menu_Audio" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Sonido_Global" type="Label" parent="CanvasLayer/Menu_Audio"]
+layout_mode = 0
+offset_left = 51.7888
+offset_top = 69.3824
+offset_right = 108.789
+offset_bottom = 83.3824
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OA_1"
+
+[node name="Sonido_Global" type="HScrollBar" parent="CanvasLayer/Menu_Audio/Sonido_Global"]
+layout_mode = 0
+offset_left = 167.005
+offset_top = 1.6588
+offset_right = 218.005
+offset_bottom = 9.6588
+scale = Vector2(1, 0.84)
+focus_neighbor_top = NodePath("../../../Audio")
+focus_neighbor_bottom = NodePath("../../Musica_de_Fondo/Musica_de_Fondo")
+focus_mode = 2
+mouse_filter = 2
+theme_override_styles/scroll = SubResource("StyleBoxTexture_dp57p")
+theme_override_styles/scroll_focus = SubResource("StyleBoxTexture_lotcg")
+theme_override_styles/grabber = SubResource("StyleBoxTexture_2m2x8")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxTexture_rn0qm")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_7p6ky")
+min_value = -80.0
+max_value = 0.0
+step = 2.0
+value = -20.0
+rounded = true
+
+[node name="Musica_de_Fondo" type="Label" parent="CanvasLayer/Menu_Audio"]
+layout_mode = 0
+offset_left = 51.7888
+offset_top = 84.3824
+offset_right = 108.789
+offset_bottom = 98.3824
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OA_2"
+
+[node name="Musica_de_Fondo" type="HScrollBar" parent="CanvasLayer/Menu_Audio/Musica_de_Fondo"]
+layout_mode = 0
+offset_left = 167.005
+offset_top = 1.6588
+offset_right = 218.005
+offset_bottom = 9.6588
+scale = Vector2(1, 0.84)
+focus_neighbor_top = NodePath("../../Sonido_Global/Sonido_Global")
+focus_neighbor_bottom = NodePath("../../Efectos_de_Sonido/Efectos_de_Sonido")
+focus_mode = 2
+mouse_filter = 2
+theme_override_styles/scroll = SubResource("StyleBoxTexture_dp57p")
+theme_override_styles/scroll_focus = SubResource("StyleBoxTexture_lotcg")
+theme_override_styles/grabber = SubResource("StyleBoxTexture_2m2x8")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxTexture_rn0qm")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_7p6ky")
+min_value = -80.0
+max_value = 0.0
+step = 2.0
+value = -20.0
+rounded = true
+
+[node name="Efectos_de_Sonido" type="Label" parent="CanvasLayer/Menu_Audio"]
+layout_mode = 0
+offset_left = 51.7888
+offset_top = 99.3824
+offset_right = 108.789
+offset_bottom = 113.382
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OA_3"
+
+[node name="Efectos_de_Sonido" type="HScrollBar" parent="CanvasLayer/Menu_Audio/Efectos_de_Sonido"]
+layout_mode = 0
+offset_left = 167.005
+offset_top = 1.6588
+offset_right = 218.005
+offset_bottom = 9.6588
+scale = Vector2(1, 0.84)
+focus_neighbor_top = NodePath("../../Musica_de_Fondo/Musica_de_Fondo")
+focus_neighbor_bottom = NodePath("../../Canciones/Canciones")
+focus_mode = 2
+mouse_filter = 2
+theme_override_styles/scroll = SubResource("StyleBoxTexture_dp57p")
+theme_override_styles/scroll_focus = SubResource("StyleBoxTexture_lotcg")
+theme_override_styles/grabber = SubResource("StyleBoxTexture_2m2x8")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxTexture_rn0qm")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_7p6ky")
+min_value = -80.0
+max_value = 0.0
+step = 2.0
+value = -20.0
+rounded = true
+
+[node name="Canciones" type="Label" parent="CanvasLayer/Menu_Audio"]
+layout_mode = 0
+offset_left = 51.7888
+offset_top = 114.382
+offset_right = 108.789
+offset_bottom = 128.382
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OA_5"
+
+[node name="Canciones" type="HScrollBar" parent="CanvasLayer/Menu_Audio/Canciones"]
+layout_mode = 0
+offset_left = 167.005
+offset_top = 1.6588
+offset_right = 218.005
+offset_bottom = 9.6588
+scale = Vector2(1, 0.84)
+focus_neighbor_top = NodePath("../../Efectos_de_Sonido/Efectos_de_Sonido")
+focus_neighbor_bottom = NodePath("../../Musica_Menu_Principal/Musica_Menu_Principal")
+focus_mode = 2
+mouse_filter = 2
+theme_override_styles/scroll = SubResource("StyleBoxTexture_dp57p")
+theme_override_styles/scroll_focus = SubResource("StyleBoxTexture_lotcg")
+theme_override_styles/grabber = SubResource("StyleBoxTexture_2m2x8")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxTexture_rn0qm")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_7p6ky")
+min_value = -80.0
+max_value = 0.0
+step = 2.0
+value = -20.0
+rounded = true
+
+[node name="Musica_Menu_Principal" type="Label" parent="CanvasLayer/Menu_Audio"]
+layout_mode = 0
+offset_left = 51.7888
+offset_top = 129.382
+offset_right = 108.789
+offset_bottom = 143.382
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OA_4"
+
+[node name="Musica_Menu_Principal" type="HScrollBar" parent="CanvasLayer/Menu_Audio/Musica_Menu_Principal"]
+layout_mode = 0
+offset_left = 167.005
+offset_top = 1.6588
+offset_right = 218.005
+offset_bottom = 9.6588
+scale = Vector2(1, 0.84)
+focus_neighbor_top = NodePath("../../Canciones/Canciones")
+focus_mode = 2
+mouse_filter = 2
+theme_override_styles/scroll = SubResource("StyleBoxTexture_dp57p")
+theme_override_styles/scroll_focus = SubResource("StyleBoxTexture_lotcg")
+theme_override_styles/grabber = SubResource("StyleBoxTexture_2m2x8")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxTexture_rn0qm")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_7p6ky")
+min_value = -80.0
+max_value = 0.0
+step = 2.0
+value = -20.0
+rounded = true
+
+[node name="Controles" type="Button" parent="CanvasLayer"]
+offset_left = 234.013
+offset_top = 38.4977
+offset_right = 302.013
+offset_bottom = 62.4977
+focus_neighbor_left = NodePath("../Audio")
+focus_neighbor_top = NodePath("../Menu_Controles/Teclado/Teclado_Map/Reiniciar")
+focus_neighbor_bottom = NodePath("../Menu_Controles/Teclado")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0p5h1")
+button_mask = 0
+text = "MO_4"
+flat = true
+
+[node name="Menu_Controles" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Opciones_Control" type="Sprite2D" parent="CanvasLayer/Menu_Controles"]
+position = Vector2(160, 90)
+texture = ExtResource("6_ga8b6")
+hframes = 2
+
+[node name="Teclado" type="Button" parent="CanvasLayer/Menu_Controles"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 61.0
+offset_right = 131.0
+offset_bottom = 74.0
+focus_neighbor_top = NodePath("../../Controles")
+focus_neighbor_right = NodePath("../Mando")
+focus_neighbor_bottom = NodePath("Teclado_Map/Grupo_Izquierda/Aceptar/Boton_Aceptar")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ne0qj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kork3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dd4p5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bfmt8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g56gh")
+button_mask = 0
+text = "OC_1"
+
+[node name="Teclado_Map" type="Control" parent="CanvasLayer/Menu_Controles/Teclado"]
+anchors_preset = 0
+offset_left = -3.0
+offset_top = 13.0
+offset_right = 37.0
+offset_bottom = 53.0
+
+[node name="Grupo_Izquierda" type="Control" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map"]
+anchors_preset = 0
+offset_left = -5.0
+offset_right = 35.0
+offset_bottom = 40.0
+
+[node name="Aceptar" type="Label" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Izquierda"]
+layout_mode = 0
+offset_left = -24.0202
+offset_top = 1.73085
+offset_right = 10.9798
+offset_bottom = 15.7309
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OT_1"
+
+[node name="Boton_Aceptar" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Izquierda/Aceptar" instance=ExtResource("7_qtpxm")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 88.0
+offset_bottom = 11.0
+focus_neighbor_left = NodePath("../../../Grupo_Derecha/Cancelar/Boton_Cancelar")
+focus_neighbor_top = NodePath("../../../..")
+focus_neighbor_right = NodePath("../../../Grupo_Derecha/Cancelar/Boton_Cancelar")
+focus_neighbor_bottom = NodePath("../../Abajo/Boton_Abajo")
+text = "--"
+flat = true
+Accion = "ui_accept"
+Entrada_Teclado = 4194309
+Entrada_Mando = 0
+
+[node name="Abajo" type="Label" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Izquierda"]
+layout_mode = 0
+offset_left = -23.8099
+offset_top = 15.6201
+offset_right = 1.19011
+offset_bottom = 29.6201
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OT_2"
+
+[node name="Boton_Abajo" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Izquierda/Abajo" instance=ExtResource("7_qtpxm")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 88.0
+offset_bottom = 11.0
+focus_neighbor_left = NodePath("../../../Grupo_Derecha/Tocar/Boton_Tocar")
+focus_neighbor_top = NodePath("../../Aceptar/Boton_Aceptar")
+focus_neighbor_right = NodePath("../../../Grupo_Derecha/Tocar/Boton_Tocar")
+focus_neighbor_bottom = NodePath("../../Arriba/Boton_Arriba")
+text = "--"
+Accion = "ui_down"
+Entrada_Teclado = 83
+Entrada_Mando = 12
+Entrada_Analogo = 1
+Direccion_Analogo = 1
+
+[node name="Arriba" type="Label" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Izquierda"]
+layout_mode = 0
+offset_left = -24.2748
+offset_top = 30.687
+offset_right = 1.7252
+offset_bottom = 44.687
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OT_3"
+
+[node name="Boton_Arriba" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Izquierda/Arriba" instance=ExtResource("7_qtpxm")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 88.0
+offset_bottom = 11.0
+focus_neighbor_left = NodePath("../../../Grupo_Derecha/Atacar/Boton_Atacar")
+focus_neighbor_top = NodePath("../../Abajo/Boton_Abajo")
+focus_neighbor_right = NodePath("../../../Grupo_Derecha/Atacar/Boton_Atacar")
+focus_neighbor_bottom = NodePath("../../Derecha/Boton_Derecha")
+text = "--"
+Accion = "ui_up"
+Entrada_Teclado = 87
+Entrada_Mando = 11
+Entrada_Analogo = 1
+Direccion_Analogo = -1
+
+[node name="Derecha" type="Label" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Izquierda"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 46.0
+offset_right = 6.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OT_4"
+
+[node name="Boton_Derecha" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Izquierda/Derecha" instance=ExtResource("7_qtpxm")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 88.0
+offset_bottom = 11.0
+focus_neighbor_left = NodePath("../../../Grupo_Derecha/Disparar/Boton_Disparar")
+focus_neighbor_top = NodePath("../../Arriba/Boton_Arriba")
+focus_neighbor_right = NodePath("../../../Grupo_Derecha/Disparar/Boton_Disparar")
+focus_neighbor_bottom = NodePath("../../Izquierda/Boton_Izquierda")
+text = "--"
+Accion = "ui_right"
+Entrada_Teclado = 68
+Entrada_Mando = 14
+Entrada_Analogo = 0
+Direccion_Analogo = 1
+
+[node name="Izquierda" type="Label" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Izquierda"]
+layout_mode = 0
+offset_left = -23.7699
+offset_top = 61.1689
+offset_right = 16.2301
+offset_bottom = 75.1689
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OT_5"
+
+[node name="Boton_Izquierda" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Izquierda/Izquierda" instance=ExtResource("7_qtpxm")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 88.0
+offset_bottom = 11.0
+focus_neighbor_left = NodePath("../../../Grupo_Derecha/Esquivar/Boton_Esquivar")
+focus_neighbor_top = NodePath("../../Derecha/Boton_Derecha")
+focus_neighbor_right = NodePath("../../../Grupo_Derecha/Esquivar/Boton_Esquivar")
+focus_neighbor_bottom = NodePath("../../Inventario/Boton_Inventario")
+text = "--"
+Accion = "ui_left"
+Entrada_Teclado = 65
+Entrada_Mando = 13
+Entrada_Analogo = 0
+Direccion_Analogo = -1
+
+[node name="Inventario" type="Label" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Izquierda"]
+layout_mode = 0
+offset_left = -23.7376
+offset_top = 75.6109
+offset_right = 18.2624
+offset_bottom = 89.6109
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OT_6"
+
+[node name="Boton_Inventario" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Izquierda/Inventario" instance=ExtResource("7_qtpxm")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 94.0
+offset_bottom = 11.0
+focus_neighbor_left = NodePath("../../../Grupo_Derecha/Pausa/Boton_Pausa")
+focus_neighbor_top = NodePath("../../Izquierda/Boton_Izquierda")
+focus_neighbor_right = NodePath("../../../Grupo_Derecha/Pausa/Boton_Pausa")
+text = "--"
+Accion = "ui_inventory"
+Entrada_Teclado = 4194306
+Entrada_Mando = 4
+
+[node name="Grupo_Derecha" type="Control" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map"]
+anchors_preset = 0
+offset_left = 13.0
+offset_right = 53.0
+offset_bottom = 40.0
+
+[node name="Cancelar" type="Label" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Derecha"]
+layout_mode = 0
+offset_left = 85.8093
+offset_top = 1.74957
+offset_right = 123.809
+offset_bottom = 15.7496
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OT_7"
+
+[node name="Boton_Cancelar" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Derecha/Cancelar" instance=ExtResource("7_qtpxm")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 88.0
+offset_bottom = 11.0
+focus_neighbor_left = NodePath("../../../Grupo_Izquierda/Aceptar/Boton_Aceptar")
+focus_neighbor_top = NodePath("../../../..")
+focus_neighbor_right = NodePath("../../../Grupo_Izquierda/Aceptar/Boton_Aceptar")
+focus_neighbor_bottom = NodePath("../../Tocar/Boton_Tocar")
+text = "--"
+Accion = "ui_cancel"
+Entrada_Teclado = 4194305
+Entrada_Mando = 1
+
+[node name="Tocar" type="Label" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Derecha"]
+layout_mode = 0
+offset_left = 85.8111
+offset_top = 15.8621
+offset_right = 115.811
+offset_bottom = 29.8621
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OT_8"
+
+[node name="Boton_Tocar" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Derecha/Tocar" instance=ExtResource("7_qtpxm")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 88.0
+offset_bottom = 11.0
+focus_neighbor_left = NodePath("../../../Grupo_Izquierda/Abajo/Boton_Abajo")
+focus_neighbor_top = NodePath("../../Cancelar/Boton_Cancelar")
+focus_neighbor_right = NodePath("../../../Grupo_Izquierda/Abajo/Boton_Abajo")
+focus_neighbor_bottom = NodePath("../../Atacar/Boton_Atacar")
+text = "--"
+Accion = "ui_play"
+Entrada_Teclado = 75
+Entrada_Mando = 0
+
+[node name="Atacar" type="Label" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Derecha"]
+layout_mode = 0
+offset_left = 85.8603
+offset_top = 30.9979
+offset_right = 112.86
+offset_bottom = 44.9979
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OT_9"
+
+[node name="Boton_Atacar" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Derecha/Atacar" instance=ExtResource("7_qtpxm")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 88.0
+offset_bottom = 11.0
+focus_neighbor_left = NodePath("../../../Grupo_Izquierda/Arriba/Boton_Arriba")
+focus_neighbor_top = NodePath("../../Tocar/Boton_Tocar")
+focus_neighbor_right = NodePath("../../../Grupo_Izquierda/Arriba/Boton_Arriba")
+focus_neighbor_bottom = NodePath("../../Disparar/Boton_Disparar")
+text = "--"
+Accion = "ui_attack"
+Entrada_Teclado = 74
+Entrada_Mando = 2
+
+[node name="Disparar" type="Label" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Derecha"]
+layout_mode = 0
+offset_left = 85.6467
+offset_top = 45.7278
+offset_right = 118.647
+offset_bottom = 59.7278
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OT_10"
+
+[node name="Boton_Disparar" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Derecha/Disparar" instance=ExtResource("7_qtpxm")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 88.0
+offset_bottom = 11.0
+focus_neighbor_left = NodePath("../../../Grupo_Izquierda/Derecha/Boton_Derecha")
+focus_neighbor_top = NodePath("../../Atacar/Boton_Atacar")
+focus_neighbor_right = NodePath("../../../Grupo_Izquierda/Derecha/Boton_Derecha")
+focus_neighbor_bottom = NodePath("../../Esquivar/Boton_Esquivar")
+text = "--"
+
+[node name="Esquivar" type="Label" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Derecha"]
+layout_mode = 0
+offset_left = 84.9091
+offset_top = 60.8876
+offset_right = 119.909
+offset_bottom = 74.8876
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OT_11"
+
+[node name="Boton_Esquivar" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Derecha/Esquivar" instance=ExtResource("7_qtpxm")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 89.0
+offset_bottom = 11.0
+focus_neighbor_left = NodePath("../../../Grupo_Izquierda/Izquierda/Boton_Izquierda")
+focus_neighbor_top = NodePath("../../Disparar/Boton_Disparar")
+focus_neighbor_right = NodePath("../../../Grupo_Izquierda/Izquierda/Boton_Izquierda")
+focus_neighbor_bottom = NodePath("../../Pausa/Boton_Pausa")
+text = "--"
+Accion = "ui_jump"
+Entrada_Teclado = 76
+Entrada_Mando = 1
+
+[node name="Pausa" type="Label" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Derecha"]
+layout_mode = 0
+offset_left = 86.1176
+offset_top = 76.8564
+offset_right = 150.118
+offset_bottom = 90.8564
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 10
+text = "OT_12"
+
+[node name="Boton_Pausa" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Grupo_Derecha/Pausa" instance=ExtResource("7_qtpxm")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 93.0
+offset_bottom = 11.0
+focus_neighbor_left = NodePath("../../../Grupo_Izquierda/Inventario/Boton_Inventario")
+focus_neighbor_top = NodePath("../../Esquivar/Boton_Esquivar")
+focus_neighbor_right = NodePath("../../../Grupo_Izquierda/Inventario/Boton_Inventario")
+text = "--"
+Accion = "ui_start"
+Entrada_Teclado = 32
+Entrada_Mando = 6
+
+[node name="Reiniciar" type="Button" parent="CanvasLayer/Menu_Controles/Teclado/Teclado_Map"]
+layout_mode = 0
+offset_left = 203.727
+offset_top = -58.409
+offset_right = 223.727
+offset_bottom = -38.409
+focus_neighbor_bottom = NodePath("../../../../Controles")
+theme_override_styles/normal = SubResource("StyleBoxTexture_opuix")
+theme_override_styles/hover = SubResource("StyleBoxTexture_02ipo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7scyj")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_01syx")
+theme_override_styles/focus = SubResource("StyleBoxTexture_tk31j")
+
+[node name="Mando" type="Button" parent="CanvasLayer/Menu_Controles"]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 61.0
+offset_right = 239.0
+offset_bottom = 74.0
+focus_neighbor_left = NodePath("../Teclado")
+focus_neighbor_top = NodePath("../../Controles")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8lb82")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_m20pf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_40g4o")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2spny")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rik6f")
+button_mask = 0
+text = "OC_2"
+
+[node name="ControlMap" type="Sprite2D" parent="CanvasLayer/Menu_Controles/Mando"]
+position = Vector2(-38.0173, 39.9147)
+texture = ExtResource("6_ci5rw")
+
+[node name="Atacar" type="Label" parent="CanvasLayer/Menu_Controles/Mando/ControlMap"]
+offset_left = 63.9409
+offset_top = -8.88698
+offset_right = 85.9409
+offset_bottom = 3.11302
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 5
+text = "OT_9"
+
+[node name="Disparar" type="Label" parent="CanvasLayer/Menu_Controles/Mando/ControlMap"]
+offset_left = 69.6093
+offset_top = 8.38023
+offset_right = 92.6093
+offset_bottom = 19.3802
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 5
+text = "OT_10"
+
+[node name="Esquivar_Cancelar" type="Label" parent="CanvasLayer/Menu_Controles/Mando/ControlMap"]
+offset_left = 72.007
+offset_top = 21.6742
+offset_right = 122.007
+offset_bottom = 43.6742
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 5
+text = "OM_1"
+
+[node name="Aceptar_Tocar" type="Label" parent="CanvasLayer/Menu_Controles/Mando/ControlMap"]
+offset_left = 70.289
+offset_top = 35.8437
+offset_right = 99.289
+offset_bottom = 44.8437
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 5
+text = "OM_2"
+
+[node name="Pausa" type="Label" parent="CanvasLayer/Menu_Controles/Mando/ControlMap"]
+offset_left = 14.5055
+offset_top = 57.1809
+offset_right = 28.5055
+offset_bottom = 66.1809
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 5
+text = "OT_12"
+
+[node name="Inventario" type="Label" parent="CanvasLayer/Menu_Controles/Mando/ControlMap"]
+offset_left = -36.4101
+offset_top = 57.2177
+offset_right = -15.4101
+offset_bottom = 66.2177
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 5
+text = "OT_6"
+
+[node name="Movimiento" type="Label" parent="CanvasLayer/Menu_Controles/Mando/ControlMap"]
+offset_left = -71.5
+offset_top = 50.125
+offset_right = -50.5
+offset_bottom = 59.125
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 5
+text = "OM_3"
+
+[node name="Abajo" type="Label" parent="CanvasLayer/Menu_Controles/Mando/ControlMap"]
+offset_left = -86.0
+offset_top = 36.125
+offset_right = -72.0
+offset_bottom = 45.125
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 5
+text = "OT_2"
+
+[node name="Izquierda" type="Label" parent="CanvasLayer/Menu_Controles/Mando/ControlMap"]
+offset_left = -99.75
+offset_top = 22.375
+offset_right = -79.75
+offset_bottom = 31.375
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 5
+text = "OT_5"
+
+[node name="Arriba" type="Label" parent="CanvasLayer/Menu_Controles/Mando/ControlMap"]
+offset_left = -85.9496
+offset_top = 7.91069
+offset_right = -72.9496
+offset_bottom = 16.9107
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 5
+text = "OT_3"
+
+[node name="Derecha" type="Label" parent="CanvasLayer/Menu_Controles/Mando/ControlMap"]
+offset_left = -76.652
+offset_top = -2.38491
+offset_right = -61.652
+offset_bottom = 6.61509
+theme_override_fonts/font = ExtResource("4_opwe2")
+theme_override_font_sizes/font_size = 5
+text = "OT_4"
+
+[connection signal="button_down" from="CanvasLayer/Aceptar" to="." method="_on_aceptar_button_down"]
+[connection signal="button_down" from="CanvasLayer/Generales" to="." method="_on_generales_button_down"]
+[connection signal="item_selected" from="CanvasLayer/Menu_Generales/Idioma/Idioma" to="." method="_on_idioma_item_selected"]
+[connection signal="button_down" from="CanvasLayer/Video" to="." method="_on_video_button_down"]
+[connection signal="item_selected" from="CanvasLayer/Menu_Video/Modo_Pantalla/Opciones_Pantalla" to="." method="_on_opciones_pantalla_item_selected"]
+[connection signal="item_selected" from="CanvasLayer/Menu_Video/Resolucion/Opciones_Resolucion" to="." method="_on_opciones_resolucion_item_selected"]
+[connection signal="button_down" from="CanvasLayer/Audio" to="." method="_on_audio_button_down"]
+[connection signal="value_changed" from="CanvasLayer/Menu_Audio/Sonido_Global/Sonido_Global" to="." method="_on_sonido_global_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Menu_Audio/Musica_de_Fondo/Musica_de_Fondo" to="." method="_on_musica_de_fondo_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Menu_Audio/Efectos_de_Sonido/Efectos_de_Sonido" to="." method="_on_efectos_de_sonido_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Menu_Audio/Canciones/Canciones" to="." method="_on_canciones_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Menu_Audio/Musica_Menu_Principal/Musica_Menu_Principal" to="." method="_on_musica_menu_principal_value_changed"]
+[connection signal="button_down" from="CanvasLayer/Controles" to="." method="_on_controles_button_down"]
+[connection signal="button_down" from="CanvasLayer/Menu_Controles/Teclado" to="." method="_on_teclado_button_down"]
+[connection signal="button_down" from="CanvasLayer/Menu_Controles/Teclado/Teclado_Map/Reiniciar" to="." method="_on_reiniciar_button_down"]
+[connection signal="button_down" from="CanvasLayer/Menu_Controles/Mando" to="." method="_on_mando_button_down"]

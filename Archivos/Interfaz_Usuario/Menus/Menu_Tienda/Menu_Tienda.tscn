@@ -1,0 +1,263 @@
+[gd_scene load_steps=25 format=3 uid="uid://b4bfpihp0q550"]
+
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Tienda/Menu_Tienda.gd" id="1_5h543"]
+[ext_resource type="FontFile" uid="uid://co61opcls3s22" path="res://Archivos/Documentos/Fuentes/Gelio Pasteli.ttf" id="1_v3m76"]
+[ext_resource type="Texture2D" uid="uid://ipr5pfndoqmq" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Tienda/Menu_Tienda.png" id="2_hgoym"]
+[ext_resource type="PackedScene" uid="uid://g2ss7brh7qlq" path="res://Archivos/Interfaz_Usuario/Recogibles/Obolo/Obolo.tscn" id="3_rb55x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q1g44"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6fbgb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4atha"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c53ig"]
+
+[sub_resource type="Gradient" id="Gradient_qw8lt"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_oi1g4"]
+gradient = SubResource("Gradient_qw8lt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ne0a"]
+texture = SubResource("GradientTexture1D_oi1g4")
+texture_margin_bottom = 1.0
+draw_center = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1k8mw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_md2kq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_udvnv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b5q4q"]
+
+[sub_resource type="Gradient" id="Gradient_jgb1o"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_t6gg1"]
+gradient = SubResource("Gradient_jgb1o")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bkyy5"]
+texture = SubResource("GradientTexture1D_t6gg1")
+texture_margin_bottom = 1.0
+draw_center = false
+
+[sub_resource type="Gradient" id="Gradient_6db77"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_35ov0"]
+gradient = SubResource("Gradient_6db77")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mdxj5"]
+texture = SubResource("GradientTexture1D_35ov0")
+texture_margin_bottom = 1.0
+draw_center = false
+
+[sub_resource type="Gradient" id="Gradient_bxtgl"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.313726, 0.313726, 0.313726, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2m4id"]
+gradient = SubResource("Gradient_bxtgl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_02glr"]
+texture = SubResource("GradientTexture1D_2m4id")
+texture_margin_bottom = 1.0
+draw_center = false
+
+[node name="Menu_Tienda" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5h543")
+metadata/_edit_vertical_guides_ = [49.9641, 270.215, 160.304]
+metadata/_edit_horizontal_guides_ = [18.7764]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0.392157)
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="Fondo" type="TextureRect" parent="CanvasLayer"]
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("2_hgoym")
+
+[node name="Tienda" type="Label" parent="CanvasLayer"]
+offset_left = 97.0
+offset_top = 30.0
+offset_right = 224.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.937255, 0.721569, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("1_v3m76")
+theme_override_font_sizes/font_size = 20
+text = "MT_1"
+horizontal_alignment = 1
+
+[node name="Adagio_Amor" type="Button" parent="CanvasLayer"]
+offset_left = 55.0
+offset_top = 75.0
+offset_right = 270.0
+offset_bottom = 86.0
+focus_neighbor_top = NodePath("../Aria_Hermes")
+focus_neighbor_bottom = NodePath("../Preludio")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.529412, 0.529412, 0.529412, 1)
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_v3m76")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_q1g44")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6fbgb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4atha")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_c53ig")
+theme_override_styles/focus = SubResource("StyleBoxTexture_0ne0a")
+button_mask = 0
+text = "CC_5"
+alignment = 0
+
+[node name="Precio" type="Label" parent="CanvasLayer/Adagio_Amor"]
+layout_mode = 0
+offset_left = 190.0
+offset_right = 199.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_v3m76")
+theme_override_font_sizes/font_size = 10
+text = "15"
+
+[node name="Obolo" parent="CanvasLayer/Adagio_Amor/Precio" instance=ExtResource("3_rb55x")]
+position = Vector2(15, 5)
+Sombra = false
+Temporizador = false
+
+[node name="Aletheia" type="Button" parent="CanvasLayer"]
+offset_left = 55.0
+offset_top = 105.0
+offset_right = 270.0
+offset_bottom = 116.0
+focus_neighbor_top = NodePath("../Preludio")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.529412, 0.529412, 0.529412, 1)
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_v3m76")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1k8mw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_md2kq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_udvnv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_b5q4q")
+theme_override_styles/focus = SubResource("StyleBoxTexture_bkyy5")
+button_mask = 0
+text = "CC_9"
+flat = true
+alignment = 0
+
+[node name="Precio" type="Label" parent="CanvasLayer/Aletheia"]
+layout_mode = 0
+offset_left = 190.0
+offset_right = 200.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_v3m76")
+theme_override_font_sizes/font_size = 10
+text = "25"
+
+[node name="Obolo" parent="CanvasLayer/Aletheia/Precio" instance=ExtResource("3_rb55x")]
+position = Vector2(15, 5)
+Sombra = false
+Temporizador = false
+
+[node name="Aria_Hermes" type="Button" parent="CanvasLayer"]
+offset_left = 55.0
+offset_top = 60.0
+offset_right = 270.0
+offset_bottom = 71.0
+focus_neighbor_bottom = NodePath("../Adagio_Amor")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.529412, 0.529412, 0.529412, 1)
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_v3m76")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_q1g44")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6fbgb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4atha")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_c53ig")
+theme_override_styles/focus = SubResource("StyleBoxTexture_mdxj5")
+button_mask = 0
+text = "CC_3"
+flat = true
+alignment = 0
+
+[node name="Precio" type="Label" parent="CanvasLayer/Aria_Hermes"]
+layout_mode = 0
+offset_left = 190.0
+offset_right = 199.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_v3m76")
+theme_override_font_sizes/font_size = 10
+text = "10"
+
+[node name="Obolo" parent="CanvasLayer/Aria_Hermes/Precio" instance=ExtResource("3_rb55x")]
+position = Vector2(15, 5)
+Sombra = false
+Temporizador = false
+
+[node name="Preludio" type="Button" parent="CanvasLayer"]
+offset_left = 55.0
+offset_top = 90.0
+offset_right = 270.0
+offset_bottom = 101.0
+focus_neighbor_top = NodePath("../Adagio_Amor")
+focus_neighbor_bottom = NodePath("../Aletheia")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.529412, 0.529412, 0.529412, 1)
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_v3m76")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_q1g44")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6fbgb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4atha")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_c53ig")
+theme_override_styles/focus = SubResource("StyleBoxTexture_02glr")
+button_mask = 0
+text = "CC_7"
+flat = true
+alignment = 0
+
+[node name="Precio" type="Label" parent="CanvasLayer/Preludio"]
+layout_mode = 0
+offset_left = 190.0
+offset_right = 200.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_v3m76")
+theme_override_font_sizes/font_size = 10
+text = "50"
+
+[node name="Obolo" parent="CanvasLayer/Preludio/Precio" instance=ExtResource("3_rb55x")]
+position = Vector2(15, 5)
+Sombra = false
+Temporizador = false
+
+[connection signal="button_down" from="CanvasLayer/Adagio_Amor" to="." method="_on_adagio_amor_button_down"]
+[connection signal="button_down" from="CanvasLayer/Aletheia" to="." method="_on_aletheia_button_down"]
+[connection signal="button_down" from="CanvasLayer/Aria_Hermes" to="." method="_on_aria_hermes_button_down"]
+[connection signal="button_down" from="CanvasLayer/Preludio" to="." method="_on_preludio_button_down"]

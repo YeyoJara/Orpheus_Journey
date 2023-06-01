@@ -1,0 +1,175 @@
+[gd_scene load_steps=29 format=3 uid="uid://dgy7r516v4e5u"]
+
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Interfaz_Usuario.gd" id="1_inqyv"]
+[ext_resource type="Texture2D" uid="uid://c8ak2ybo8kwyv" path="res://Archivos/Interfaz_Usuario/Barras/Corazon_Vacio/Corazon_Vacio0000.png" id="2_2eslm"]
+[ext_resource type="Texture2D" uid="uid://c0q2q6r2wit7v" path="res://Archivos/Interfaz_Usuario/Barras/Corazon_Vacio/Corazon_Vacio0001.png" id="3_8f31y"]
+[ext_resource type="Texture2D" uid="uid://4rlsjehrpkuh" path="res://Archivos/Interfaz_Usuario/Barras/Corazon_Vacio/Corazon_Vacio0002.png" id="4_131lp"]
+[ext_resource type="Texture2D" uid="uid://bwokeel4j18ut" path="res://Archivos/Interfaz_Usuario/Barras/Corazon_Vacio/Corazon_Vacio0003.png" id="5_xvp27"]
+[ext_resource type="Texture2D" uid="uid://dqu2mhbxch5k3" path="res://Archivos/Interfaz_Usuario/Barras/Corazon_Lleno/Corazon_Lleno0000.png" id="6_2peqb"]
+[ext_resource type="Texture2D" uid="uid://y0dye4lre14t" path="res://Archivos/Interfaz_Usuario/Barras/Corazon_Lleno/Corazon_Lleno0001.png" id="7_7r27y"]
+[ext_resource type="Texture2D" uid="uid://c3qrosdnve130" path="res://Archivos/Interfaz_Usuario/Barras/Corazon_Lleno/Corazon_Lleno0002.png" id="8_37o5k"]
+[ext_resource type="Texture2D" uid="uid://dk18t3kemtbxd" path="res://Archivos/Interfaz_Usuario/Barras/Corazon_Lleno/Corazon_Lleno0003.png" id="9_nke5a"]
+[ext_resource type="Texture2D" uid="uid://cdve8t7m5aea3" path="res://Archivos/Interfaz_Usuario/Recogibles/Obolo/Textura/Obolo0000.png" id="10_cw6yk"]
+[ext_resource type="Texture2D" uid="uid://x5ogopdb4dvl" path="res://Archivos/Interfaz_Usuario/Barras/Silencio_Corchea/Silencio_Corchea0000.png" id="10_sr7lq"]
+[ext_resource type="Texture2D" uid="uid://g2qbtkegjntp" path="res://Archivos/Interfaz_Usuario/Recogibles/Obolo/Textura/Obolo0001.png" id="11_6d42b"]
+[ext_resource type="Texture2D" uid="uid://dipx622ebjy2i" path="res://Archivos/Interfaz_Usuario/Barras/Silencio_Corchea/Silencio_Corchea0001.png" id="11_jbwlw"]
+[ext_resource type="Texture2D" uid="uid://d3cugspnkk331" path="res://Archivos/Interfaz_Usuario/Recogibles/Obolo/Textura/Obolo0002.png" id="12_de3or"]
+[ext_resource type="Texture2D" uid="uid://dbb356p06bwoo" path="res://Archivos/Interfaz_Usuario/Barras/Silencio_Corchea/Silencio_Corchea0002.png" id="12_layc4"]
+[ext_resource type="Texture2D" uid="uid://bjktxegyqxhp2" path="res://Archivos/Interfaz_Usuario/Recogibles/Obolo/Textura/Obolo0003.png" id="13_78ap5"]
+[ext_resource type="Texture2D" uid="uid://bh5wb76ngoiwf" path="res://Archivos/Interfaz_Usuario/Barras/Silencio_Corchea/Silencio_Corchea0003.png" id="13_ir5fl"]
+[ext_resource type="FontFile" uid="uid://co61opcls3s22" path="res://Archivos/Documentos/Fuentes/Gelio Pasteli.ttf" id="14_u411h"]
+[ext_resource type="Texture2D" uid="uid://df1a2f0ku2yvr" path="res://Archivos/Interfaz_Usuario/Barras/Corchea/Corchea0000.png" id="15_8645h"]
+[ext_resource type="Texture2D" uid="uid://c7juwyxkh1knw" path="res://Archivos/Interfaz_Usuario/Barras/Corchea/Corchea0001.png" id="16_itwpu"]
+[ext_resource type="Texture2D" uid="uid://dwfx13lfyth2o" path="res://Archivos/Interfaz_Usuario/Barras/Corchea/Corchea0002.png" id="17_5g6nb"]
+[ext_resource type="Texture2D" uid="uid://ih2jiemor6ce" path="res://Archivos/Interfaz_Usuario/Barras/Corchea/Corchea0003.png" id="18_1t62g"]
+[ext_resource type="Texture2D" uid="uid://bijpags4u2l7v" path="res://Archivos/Interfaz_Usuario/Barras/Corchea/Corchea0004.png" id="19_812yd"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_kw5gt"]
+frames = 4
+speed_scale = 10.0
+frame_0/texture = ExtResource("2_2eslm")
+frame_1/texture = ExtResource("3_8f31y")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("4_131lp")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("5_xvp27")
+frame_3/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_n2vnv"]
+frames = 4
+speed_scale = 5.0
+frame_0/texture = ExtResource("6_2peqb")
+frame_1/texture = ExtResource("7_7r27y")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("8_37o5k")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("9_nke5a")
+frame_3/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ngq4l"]
+frames = 4
+frame_0/texture = ExtResource("10_sr7lq")
+frame_1/texture = ExtResource("11_jbwlw")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("12_layc4")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("13_ir5fl")
+frame_3/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_w0qs3"]
+frames = 5
+frame_0/texture = ExtResource("15_8645h")
+frame_1/texture = ExtResource("16_itwpu")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("17_5g6nb")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("18_1t62g")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("19_812yd")
+frame_4/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_x5o6b"]
+frames = 4
+speed_scale = 5.0
+frame_0/texture = ExtResource("10_cw6yk")
+frame_1/texture = ExtResource("11_6d42b")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("12_de3or")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("13_78ap5")
+frame_3/duration = 1.0
+
+[node name="Interfaz_Usuario" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_inqyv")
+
+[node name="Barra_Vida" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Corazon_Vacio" type="TextureRect" parent="Barra_Vida"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 24.0
+offset_bottom = 24.0
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AnimatedTexture_kw5gt")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Corzon_Lleno" type="TextureRect" parent="Barra_Vida"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 8.0
+offset_bottom = 24.0
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AnimatedTexture_n2vnv")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Barra_Reutilizable" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 1.0
+offset_right = 40.0
+offset_bottom = 41.0
+
+[node name="Silencio_Corchea" type="TextureRect" parent="Barra_Reutilizable"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 17.0
+offset_right = 30.0
+offset_bottom = 44.0
+scale = Vector2(0.3, 0.3)
+texture = SubResource("AnimatedTexture_ngq4l")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Corchea" type="TextureRect" parent="Barra_Reutilizable"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 17.0
+offset_right = 8.0
+offset_bottom = 44.0
+scale = Vector2(0.3, 0.3)
+texture = SubResource("AnimatedTexture_w0qs3")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Obolos" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Obolo" type="TextureRect" parent="Obolos"]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 7.0
+offset_right = 286.0
+offset_bottom = 16.0
+texture = SubResource("AnimatedTexture_x5o6b")
+
+[node name="Contador" type="Label" parent="Obolos"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 7.0
+offset_right = 297.0
+offset_bottom = 21.0
+theme_override_fonts/font = ExtResource("14_u411h")
+theme_override_font_sizes/font_size = 10
+text = "99"
+
+[node name="Visualizar_Obolos" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="Visualizar_Obolos" to="." method="_on_visualizar_obolos_timeout"]

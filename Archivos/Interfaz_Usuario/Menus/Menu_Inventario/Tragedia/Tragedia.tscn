@@ -1,0 +1,147 @@
+[gd_scene load_steps=8 format=3 uid="uid://con3umooh4r3w"]
+
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Tragedia/Tragedia.gd" id="1_0pakj"]
+[ext_resource type="Texture2D" uid="uid://cgp8bxw10b00" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Tragedia/Tragedia_Sprite_Sheet.png" id="1_5g6dw"]
+[ext_resource type="FontFile" uid="uid://co61opcls3s22" path="res://Archivos/Documentos/Fuentes/Gelio Pasteli.ttf" id="3_20e82"]
+
+[sub_resource type="Animation" id="Animation_23u5d"]
+resource_name = "Abrir"
+length = 0.8
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tragedia:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [7, 6, 5, 4, 3, 2, 1, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tragedia_Orfeo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_wt7it"]
+resource_name = "Cerrar"
+length = 0.8
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tragedia:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Cerrar"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tragedia_Orfeo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_n13j8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tragedia:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tragedia_Orfeo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uh7ri"]
+_data = {
+"Abrir": SubResource("Animation_23u5d"),
+"Cerrar": SubResource("Animation_wt7it"),
+"RESET": SubResource("Animation_n13j8")
+}
+
+[node name="Tragedia" type="CanvasLayer"]
+offset = Vector2(160, 90)
+transform = Transform2D(1, 0, 0, 1, 160, 90)
+script = ExtResource("1_0pakj")
+
+[node name="Tragedia" type="Sprite2D" parent="."]
+texture = ExtResource("1_5g6dw")
+hframes = 8
+frame = 6
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.392157)
+z_index = -1
+offset_left = -160.0
+offset_top = -90.0
+offset_right = 160.0
+offset_bottom = 90.0
+
+[node name="Tragedia_Orfeo" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+y_sort_enabled = true
+offset_left = -98.0
+offset_top = -47.0
+offset_right = 98.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_20e82")
+theme_override_font_sizes/font_size = 6
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Tragedia_Ani_Play" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_uh7ri")
+}

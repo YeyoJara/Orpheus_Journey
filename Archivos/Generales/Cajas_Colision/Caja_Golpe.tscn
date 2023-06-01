@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://qhkw83hg7dby"]
+
+[ext_resource type="Script" path="res://Archivos/Generales/Cajas_Colision/Caja_Golpe.gd" id="1_ee4hc"]
+
+[node name="Caja_Golpe" type="Area2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_ee4hc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

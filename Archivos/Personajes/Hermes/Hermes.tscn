@@ -1,0 +1,250 @@
+[gd_scene load_steps=19 format=3 uid="uid://1ac3cvfer8jo"]
+
+[ext_resource type="Texture2D" uid="uid://dq7ru8tu86cr8" path="res://Archivos/Personajes/Hermes/Hermes_Sprite_Sheet.png" id="1_jn0wj"]
+[ext_resource type="PackedScene" uid="uid://bjf855h26o70t" path="res://Archivos/Generales/Cajas_Colision/Zona_Detectar.tscn" id="2_ac5qv"]
+[ext_resource type="Script" path="res://Archivos/Personajes/Hermes/Hermes.gd" id="2_d7vqf"]
+[ext_resource type="Texture2D" uid="uid://bj3qs8wasrh0l" path="res://Archivos/Sombra/Sombra_Sprite_Sheet.png" id="3_bgw8a"]
+[ext_resource type="Texture2D" uid="uid://dk4fxnmoq88nr" path="res://Archivos/Personajes/Jefes/Carontes/Pentagrama_Sprite_Sheet.png" id="5_lq4n8"]
+[ext_resource type="AudioStream" uid="uid://bexvwdy6wj31q" path="res://Archivos/Musica/Efectos/Canciones/Aria_de_Hermes.wav" id="6_dqsc8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jvwiv"]
+radius = 4.81479
+height = 16.4164
+
+[sub_resource type="Animation" id="Animation_p6ab2"]
+resource_name = "DO_Aria_Hermes"
+length = 7.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 0.9, 1, 1.1, 1.2, 1.4, 1.6, 1.8, 2, 2.1, 2.2, 2.3, 2.4, 2.6, 2.8, 3, 3.2, 3.3, 3.4, 3.5, 3.6, 3.8, 4, 4.2, 4.4, 4.5, 4.6, 4.7, 4.8, 5, 5.2, 5.4, 5.6, 5.7, 5.8, 5.9, 6, 6.2, 6.4, 6.6, 6.8, 6.9, 7, 7.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Aria_Hermes:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_gwmfr"]
+resource_name = "Detecta_Orfeo"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 0.9, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hkel2"]
+resource_name = "Inactivo"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 0, 0, 0, 0, 0, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-2, 0), Vector2(-1, 0), Vector2(0, 0), Vector2(1, 0), Vector2(2, 0), Vector2(1, 0), Vector2(0, 0), Vector2(-1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.392157), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 1), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 0.392157), Color(1, 1, 1, 0.666667), Color(1, 1, 1, 1), Color(1, 1, 1, 0.666667)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jbw3d"]
+_data = {
+"DO_Aria_Hermes": SubResource("Animation_p6ab2"),
+"Detecta_Orfeo": SubResource("Animation_gwmfr"),
+"Inactivo": SubResource("Animation_hkel2")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3fcdn"]
+radius = 29.6265
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxtub"]
+atlas = ExtResource("5_lq4n8")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2axhq"]
+atlas = ExtResource("5_lq4n8")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu7kv"]
+atlas = ExtResource("5_lq4n8")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blm6v"]
+atlas = ExtResource("5_lq4n8")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdui7"]
+atlas = ExtResource("5_lq4n8")
+region = Rect2(128, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vgyhm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxtub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2axhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eu7kv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blm6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdui7")
+}],
+"loop": true,
+"name": &"Animacion",
+"speed": 5.0
+}]
+
+[node name="Hermes" type="Sprite2D"]
+y_sort_enabled = true
+texture = ExtResource("1_jn0wj")
+hframes = 8
+script = ExtResource("2_d7vqf")
+
+[node name="Sombra" type="Sprite2D" parent="."]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(2, 7)
+texture = ExtResource("3_bgw8a")
+hframes = 8
+frame = 5
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 16)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_jvwiv")
+
+[node name="Hermes_Ani_Play" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jbw3d")
+}
+
+[node name="Zona_Detectar" parent="." instance=ExtResource("2_ac5qv")]
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Zona_Detectar" index="0"]
+shape = SubResource("CircleShape2D_3fcdn")
+debug_color = Color(0, 0, 0, 0.2)
+
+[node name="Pentagrama" type="AnimatedSprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+position = Vector2(-1.78745, -28.3944)
+sprite_frames = SubResource("SpriteFrames_vgyhm")
+animation = &"Animacion"
+autoplay = "Animacion"
+
+[node name="Aria_Hermes" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("6_dqsc8")
+bus = &"Canciones"
+
+[editable path="Zona_Detectar"]

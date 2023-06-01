@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://bctcf8o1el5jm"]
+
+[ext_resource type="Texture2D" uid="uid://dj2ofrxhan3qj" path="res://Archivos/Efectos/Efecto_Hojas_Apliadas_Sprite_Sheet.png" id="1_qdwt0"]
+[ext_resource type="Script" path="res://Archivos/Efectos/Efectos.gd" id="2_rwgv1"]
+[ext_resource type="AudioStream" uid="uid://ba56r8ln8jcgv" path="res://Archivos/Musica/Efectos/Hojas_Golpe.wav" id="3_x4qmv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8l3p"]
+atlas = ExtResource("1_qdwt0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o51gn"]
+atlas = ExtResource("1_qdwt0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4ioj"]
+atlas = ExtResource("1_qdwt0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7v3l"]
+atlas = ExtResource("1_qdwt0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eflvb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8l3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o51gn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4ioj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7v3l")
+}],
+"loop": false,
+"name": &"Animacion",
+"speed": 5.0
+}]
+
+[node name="Efecto_Hojas_Apiladas" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_eflvb")
+animation = &"Animacion"
+script = ExtResource("2_rwgv1")
+
+[node name="Hojas" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_x4qmv")
+volume_db = 10.0
+autoplay = true
+bus = &"Efectos"

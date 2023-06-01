@@ -1,0 +1,173 @@
+[gd_scene load_steps=9 format=3 uid="uid://duinnl7x76t7v"]
+
+[ext_resource type="Texture2D" uid="uid://bysg4yy4lgoi1" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Pausa/Menu_Pausa.png" id="1_ea1cb"]
+[ext_resource type="Script" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Pausa/Menu_Pausa.gd" id="1_i2eir"]
+[ext_resource type="FontFile" uid="uid://co61opcls3s22" path="res://Archivos/Documentos/Fuentes/Gelio Pasteli.ttf" id="3_uyufq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w2avs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ky3k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5exb1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_da20k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y4j1p"]
+
+[node name="Menu_Pausa" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -320.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i2eir")
+metadata/_edit_vertical_guides_ = [160.0]
+metadata/_edit_horizontal_guides_ = [90.0]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0.784314)
+light_mask = 0
+visibility_layer = 1023
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="Fondo" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(160, 90)
+texture = ExtResource("1_ea1cb")
+
+[node name="Continuar" type="Button" parent="CanvasLayer"]
+offset_left = 96.0
+offset_top = 43.0
+offset_right = 224.0
+offset_bottom = 58.0
+focus_neighbor_bottom = NodePath("../Inventario")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uyufq")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w2avs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7ky3k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5exb1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_da20k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y4j1p")
+button_mask = 0
+text = "MP_1"
+flat = true
+text_overrun_behavior = 2
+
+[node name="Inventario" type="Button" parent="CanvasLayer"]
+offset_left = 97.0
+offset_top = 59.0
+offset_right = 225.0
+offset_bottom = 74.0
+focus_neighbor_top = NodePath("../Continuar")
+focus_neighbor_bottom = NodePath("../Opciones")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uyufq")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w2avs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7ky3k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5exb1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_da20k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y4j1p")
+button_mask = 0
+text = "MP_2"
+flat = true
+
+[node name="Opciones" type="Button" parent="CanvasLayer"]
+offset_left = 96.0
+offset_top = 74.0
+offset_right = 224.0
+offset_bottom = 89.0
+focus_neighbor_top = NodePath("../Inventario")
+focus_neighbor_bottom = NodePath("../Manual")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uyufq")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w2avs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7ky3k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5exb1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_da20k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y4j1p")
+button_mask = 0
+text = "MI_3"
+flat = true
+
+[node name="Manual" type="Button" parent="CanvasLayer"]
+offset_left = 96.0
+offset_top = 89.0
+offset_right = 224.0
+offset_bottom = 104.0
+focus_neighbor_top = NodePath("../Opciones")
+focus_neighbor_bottom = NodePath("../Menu_Principal")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uyufq")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w2avs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7ky3k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5exb1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_da20k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y4j1p")
+button_mask = 0
+text = "MI_4"
+flat = true
+
+[node name="Menu_Principal" type="Button" parent="CanvasLayer"]
+offset_left = 96.0
+offset_top = 104.0
+offset_right = 224.0
+offset_bottom = 119.0
+focus_neighbor_top = NodePath("../Manual")
+focus_neighbor_bottom = NodePath("../Salir")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uyufq")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w2avs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7ky3k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5exb1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_da20k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y4j1p")
+button_mask = 0
+text = "MP_3"
+flat = true
+
+[node name="Salir" type="Button" parent="CanvasLayer"]
+offset_left = 96.0
+offset_top = 122.0
+offset_right = 224.0
+offset_bottom = 137.0
+focus_neighbor_top = NodePath("../Menu_Principal")
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uyufq")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w2avs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7ky3k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5exb1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_da20k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y4j1p")
+button_mask = 0
+text = "MI_6"
+flat = true
+
+[connection signal="button_down" from="CanvasLayer/Continuar" to="." method="_on_continuar_button_down"]
+[connection signal="button_down" from="CanvasLayer/Inventario" to="." method="_on_inventario_button_down"]
+[connection signal="button_down" from="CanvasLayer/Opciones" to="." method="_on_opciones_button_down"]
+[connection signal="button_down" from="CanvasLayer/Manual" to="." method="_on_manual_button_down"]
+[connection signal="button_down" from="CanvasLayer/Menu_Principal" to="." method="_on_menu_principal_button_down"]
+[connection signal="button_down" from="CanvasLayer/Salir" to="." method="_on_salir_button_down"]

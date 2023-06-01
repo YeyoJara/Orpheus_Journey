@@ -1,0 +1,191 @@
+[gd_scene load_steps=21 format=3 uid="uid://bb1wmq3h2dp3n"]
+
+[ext_resource type="Texture2D" uid="uid://bta4mjosii4ls" path="res://Archivos/Personajes/Sibila_Cumas/Sibila_Cumas_Sprite_Sheet.png" id="1_ukg8i"]
+[ext_resource type="Texture2D" uid="uid://bj3qs8wasrh0l" path="res://Archivos/Sombra/Sombra_Sprite_Sheet.png" id="2_u1ah2"]
+[ext_resource type="Script" path="res://Archivos/Personajes/Sibila_Cumas/Sibila_Cumas.gd" id="2_ylfe3"]
+[ext_resource type="PackedScene" uid="uid://bjf855h26o70t" path="res://Archivos/Generales/Cajas_Colision/Zona_Detectar.tscn" id="3_f8g2g"]
+[ext_resource type="Texture2D" uid="uid://cgahndfuangfn" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0000.png" id="5_dj6pj"]
+[ext_resource type="Texture2D" uid="uid://w4r0xxx0fllj" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0001.png" id="6_bsab1"]
+[ext_resource type="Texture2D" uid="uid://d4gsf0tfv7q5y" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0002.png" id="7_w7mbu"]
+[ext_resource type="Texture2D" uid="uid://2rnieyv4fn4u" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0003.png" id="8_t7kys"]
+[ext_resource type="Texture2D" uid="uid://dd46m5g823wg2" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0004.png" id="9_gctcp"]
+[ext_resource type="Texture2D" uid="uid://dwxc4ggp3qmj4" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0005.png" id="10_hp12l"]
+
+[sub_resource type="Animation" id="Animation_xtdpi"]
+resource_name = "Detecta_Orfeo"
+length = 1.2
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 7, 8, 9, 11]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GPUParticles2D:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_svtdn"]
+resource_name = "Inactiva"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.9, 1.1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GPUParticles2D:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cpn2b"]
+_data = {
+"Detecta_Orfeo": SubResource("Animation_xtdpi"),
+"Inactiva": SubResource("Animation_svtdn")
+}
+
+[sub_resource type="Gradient" id="Gradient_s67mj"]
+offsets = PackedFloat32Array(0, 0.355556, 0.703704, 1)
+colors = PackedColorArray(0, 0.858824, 1, 1, 0.607843, 0.909804, 1, 1, 0.819608, 0.956863, 0.313726, 1, 1, 1, 0.67451, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_niyjd"]
+gradient = SubResource("Gradient_s67mj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pcpdc"]
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+particle_flag_disable_z = true
+gravity = Vector3(0, -10, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+color_ramp = SubResource("GradientTexture1D_niyjd")
+turbulence_enabled = true
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gey5o"]
+radius = 2.12021
+height = 8.68297
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_en4u5"]
+radius = 21.7837
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66ucb"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5u7wr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_dj6pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bsab1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w7mbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_t7kys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gctcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hp12l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Sibila_Cumas" type="Sprite2D"]
+y_sort_enabled = true
+texture = ExtResource("1_ukg8i")
+hframes = 13
+frame = 1
+script = ExtResource("2_ylfe3")
+
+[node name="Sombra" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, 2)
+texture = ExtResource("2_u1ah2")
+hframes = 8
+
+[node name="Sibila_Ani_Play" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cpn2b")
+}
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+z_index = 1
+position = Vector2(-2, -6)
+scale = Vector2(3, 3)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_pcpdc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 13)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_gey5o")
+
+[node name="Zona_Detectar" parent="." instance=ExtResource("3_f8g2g")]
+position = Vector2(0, 19)
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Zona_Detectar" index="0"]
+shape = SubResource("CircleShape2D_en4u5")
+debug_color = Color(0, 0, 0, 0.211765)
+
+[node name="Panel" type="Panel" parent="."]
+clip_contents = true
+offset_top = -32.0
+offset_right = 10.0
+offset_bottom = -22.0
+rotation = 0.785398
+theme_override_styles/panel = SubResource("StyleBoxFlat_66ucb")
+
+[node name="Rama_Dorada" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -25)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_5u7wr")
+autoplay = "default"
+frame_progress = 0.714084
+
+[node name="No_Existe" type="Timer" parent="."]
+wait_time = 5.0
+
+[editable path="Zona_Detectar"]

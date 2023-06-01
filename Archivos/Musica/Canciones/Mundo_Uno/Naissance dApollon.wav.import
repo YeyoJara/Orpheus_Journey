@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://rvuk1ma5lc51"
+path="res://.godot/imported/Naissance dApollon.wav-2d752bd81b4bd045e42bb7f1c2fbd1e1.sample"
+
+[deps]
+
+source_file="res://Archivos/Musica/Canciones/Mundo_Uno/Naissance dApollon.wav"
+dest_files=["res://.godot/imported/Naissance dApollon.wav-2d752bd81b4bd045e42bb7f1c2fbd1e1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

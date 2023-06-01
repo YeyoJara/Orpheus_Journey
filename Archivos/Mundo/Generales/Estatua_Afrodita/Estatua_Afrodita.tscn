@@ -1,0 +1,157 @@
+[gd_scene load_steps=14 format=3 uid="uid://cs23ssfeco8ub"]
+
+[ext_resource type="PackedScene" uid="uid://bjf855h26o70t" path="res://Archivos/Generales/Cajas_Colision/Zona_Detectar.tscn" id="1_lfgui"]
+[ext_resource type="Texture2D" uid="uid://cxfaauwwwhp23" path="res://Archivos/Mundo/Generales/Estatua_Afrodita/Afrodita_Estatua_Sprite_Sheet.png" id="1_xd1j4"]
+[ext_resource type="Script" path="res://Archivos/Mundo/Generales/Estatua_Afrodita/Estatua_Afrodita.gd" id="2_dc1ba"]
+[ext_resource type="Texture2D" uid="uid://dm28cr7sjy2uu" path="res://Archivos/Mundo/Generales/Estatua_Afrodita/Media_Columna.png" id="2_sab43"]
+[ext_resource type="AudioStream" uid="uid://cavq7nkaayork" path="res://Archivos/Musica/Efectos/Canciones/Adagio_Amor.wav" id="5_vgssy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ckm10"]
+size = Vector2(27.9072, 15.504)
+
+[sub_resource type="Animation" id="Animation_hy1wu"]
+resource_name = "Detecta_Orfeo"
+length = 11.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3, 3.3, 3.6, 3.9, 4.2, 4.5, 4.8, 5.1, 5.4, 5.7, 6, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8, 8.1, 8.4, 8.7, 9, 9.3, 9.6, 9.9, 10.2, 10.5, 10.8, 11.1, 11.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Adagio_Amor:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_fk34o"]
+resource_name = "Inactiva"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wsl5k"]
+_data = {
+"Detecta_Orfeo": SubResource("Animation_hy1wu"),
+"Inactiva": SubResource("Animation_fk34o")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hmht6"]
+radius = 32.7653
+
+[sub_resource type="Animation" id="Animation_qqpio"]
+resource_name = "Transicion"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transicion_Suave/Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Recargar_Escena"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bukmc"]
+_data = {
+"Transicion": SubResource("Animation_qqpio")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xndbr"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Estatua_Afrodita" type="Sprite2D"]
+process_mode = 3
+y_sort_enabled = true
+texture = ExtResource("1_xd1j4")
+offset = Vector2(0, -16)
+hframes = 3
+script = ExtResource("2_dc1ba")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 18
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.015, 5.2607)
+shape = SubResource("RectangleShape2D_ckm10")
+
+[node name="Columna" type="Sprite2D" parent="."]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(0, 5)
+texture = ExtResource("2_sab43")
+
+[node name="Afrodita_Ani_Play" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wsl5k")
+}
+
+[node name="Zona_Detectar" parent="." instance=ExtResource("1_lfgui")]
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Zona_Detectar" index="0"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_hmht6")
+debug_color = Color(0, 0, 0, 0.419608)
+
+[node name="Transicion_Suave" type="CanvasLayer" parent="."]
+
+[node name="Transicion" type="AnimationPlayer" parent="Transicion_Suave"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_bukmc")
+}
+
+[node name="Panel" type="Panel" parent="Transicion_Suave"]
+modulate = Color(0, 0, 0, 0)
+offset_right = 320.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xndbr")
+
+[node name="Adagio_Amor" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("5_vgssy")
+bus = &"Canciones"
+
+[editable path="Zona_Detectar"]

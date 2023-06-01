@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://c15wq3n7vhdyv"]
+
+[ext_resource type="Texture2D" uid="uid://stayqgoyx8k4" path="res://Archivos/Efectos/Efecto_Lesion.png" id="1_fe27t"]
+[ext_resource type="Script" path="res://Archivos/Efectos/Efectos.gd" id="2_vho2j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yyek"]
+atlas = ExtResource("1_fe27t")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wv7t4"]
+atlas = ExtResource("1_fe27t")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc86b"]
+atlas = ExtResource("1_fe27t")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bwp6v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yyek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wv7t4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nc86b")
+}],
+"loop": false,
+"name": &"Animacion",
+"speed": 15.0
+}]
+
+[node name="Efecto_Lira" type="AnimatedSprite2D"]
+modulate = Color(0.737255, 0.737255, 0.737255, 1)
+sprite_frames = SubResource("SpriteFrames_bwp6v")
+animation = &"Animacion"
+frame = 2
+frame_progress = 1.0
+script = ExtResource("2_vho2j")

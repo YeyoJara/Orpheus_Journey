@@ -1,0 +1,1922 @@
+[gd_scene load_steps=96 format=3 uid="uid://c74rrv640fy5"]
+
+[ext_resource type="Texture2D" uid="uid://62ss4531q4o" path="res://Archivos/Personajes/Jefes/Carontes/Caronte_Sprite_Sheet.png" id="1_jg8l6"]
+[ext_resource type="Script" path="res://Archivos/Personajes/Jefes/Carontes/Carontes.gd" id="1_lxuuy"]
+[ext_resource type="PackedScene" uid="uid://qhkw83hg7dby" path="res://Archivos/Generales/Cajas_Colision/Caja_Golpe.tscn" id="2_ia12m"]
+[ext_resource type="PackedScene" uid="uid://dieu2w7b2qxlb" path="res://Archivos/Generales/Cajas_Colision/Caja_Lesion.tscn" id="3_db6iv"]
+[ext_resource type="Texture2D" uid="uid://bj3qs8wasrh0l" path="res://Archivos/Sombra/Sombra_Sprite_Sheet.png" id="3_n380n"]
+[ext_resource type="PackedScene" uid="uid://pxkqxgdbswcu" path="res://Archivos/Generales/Estadisticas.tscn" id="4_ju776"]
+[ext_resource type="PackedScene" uid="uid://bjf855h26o70t" path="res://Archivos/Generales/Cajas_Colision/Zona_Detectar.tscn" id="5_fnujb"]
+[ext_resource type="Shape2D" uid="uid://cq3epbk4h7xlu" path="res://Archivos/Documentos/Medio_Circulo.tres" id="9_4hd21"]
+[ext_resource type="Texture2D" uid="uid://cgahndfuangfn" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0000.png" id="9_jn8jq"]
+[ext_resource type="Texture2D" uid="uid://w4r0xxx0fllj" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0001.png" id="10_ch706"]
+[ext_resource type="Texture2D" uid="uid://d4gsf0tfv7q5y" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0002.png" id="11_n1wrm"]
+[ext_resource type="Texture2D" uid="uid://2rnieyv4fn4u" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0003.png" id="12_14nq8"]
+[ext_resource type="Texture2D" uid="uid://dd46m5g823wg2" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0004.png" id="13_y53ji"]
+[ext_resource type="Texture2D" uid="uid://dwxc4ggp3qmj4" path="res://Archivos/Interfaz_Usuario/Menus/Menu_Inventario/Items/Boton_Items/Rama_Dorada/Rama_Dorada0005.png" id="14_qsl8h"]
+[ext_resource type="Texture2D" uid="uid://dk4fxnmoq88nr" path="res://Archivos/Personajes/Jefes/Carontes/Pentagrama_Sprite_Sheet.png" id="15_d7rjp"]
+[ext_resource type="AudioStream" uid="uid://cgr5dieggsl8q" path="res://Archivos/Musica/Efectos/Canciones/Preludio.wav" id="16_cp3iq"]
+[ext_resource type="AudioStream" uid="uid://cnry746glv27d" path="res://Archivos/Musica/Efectos/Lanzar_Fuego.wav" id="17_k8yrk"]
+[ext_resource type="AudioStream" uid="uid://ctoeon7xc2eol" path="res://Archivos/Musica/Efectos/Caminar_Hierva.wav" id="18_rqyfo"]
+[ext_resource type="AudioStream" uid="uid://bei1uwbp0o06j" path="res://Archivos/Musica/Efectos/Invocar.wav" id="19_u8fh7"]
+[ext_resource type="AudioStream" uid="uid://3u64x21tp8xa" path="res://Archivos/Musica/Efectos/Cuerpo_Cayendo.wav" id="20_cgkdv"]
+[ext_resource type="AudioStream" uid="uid://c4qp3yii4yblp" path="res://Archivos/Musica/Efectos/Ataque Caronte.wav" id="21_ydiow"]
+
+[sub_resource type="Animation" id="Animation_5rrxu"]
+resource_name = "Arrodillar"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [78]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_u2u6u"]
+resource_name = "Atacar1_Abajo"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [51, 52, 53, 54, 55]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [1, 0, 1]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Cambiar_Atacar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, 13), Vector2(-10, 0), Vector2(-8, -12)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Audios/Efectos/Atacar:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_a83iq"]
+resource_name = "Atacar1_Arriba"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [44, 45, 46, 47, 48]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [1, 0, 1]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Cambiar_Atacar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(7, 14), Vector2(9, -1), Vector2(7, -13)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Audios/Efectos/Atacar:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_eiyqy"]
+resource_name = "Atacar1_Derecha"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [37, 38, 39, 40, 41]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [1, 0, 1]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Cambiar_Atacar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.8, 1, 1.1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(10, 13), Vector2(13, -2), Vector2(8, -13), Vector2(-12, -12)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Audios/Efectos/Atacar:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_e5xv1"]
+resource_name = "Atacar1_Izquierda"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [30, 31, 32, 33, 34]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [1, 0, 1]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Cambiar_Atacar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.8, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11, 14), Vector2(-13, -2), Vector2(-1, -14), Vector2(13, -12)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Audios/Efectos/Atacar:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_6qxyj"]
+resource_name = "Atacar2_Abajo"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [56, 57]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Terminar_Atacar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-9, 2), Vector2(-8, 12)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Audios/Efectos/Atacar:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_2gt46"]
+resource_name = "Atacar2_Arriba"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [49, 50]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Terminar_Atacar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(10, 1), Vector2(8, 13)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Audios/Efectos/Atacar:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_6esek"]
+resource_name = "Atacar2_Derecha"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [42, 43]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Terminar_Atacar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(10, -1), Vector2(10, 14)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Audios/Efectos/Atacar:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ojwba"]
+resource_name = "Atacar2_Izquierda"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [35, 36]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Terminar_Atacar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Areas/Caja_Golpe/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-11, -2), Vector2(-11, 14)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Audios/Efectos/Atacar:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ec0yg"]
+resource_name = "Caer_Abajo"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [77, 78]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Caer_Permanente"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Audios/Efectos/Caer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_btgq7"]
+resource_name = "Caer_Arriba"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [75, 76]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Caer_Permanente"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Audios/Efectos/Caer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_t1xav"]
+resource_name = "Caer_Derecha"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [73, 74]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Caer_Permanente"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Audios/Efectos/Caer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_0584e"]
+resource_name = "Caer_Izquierda"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [71, 72]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Caer_Permanente"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Audios/Efectos/Caer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_8xq1t"]
+resource_name = "Caminar_Abajo"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [21, 22, 23, 24, 25]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 0, 1, 2, 1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Audios/Efectos/Caminar:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
+[sub_resource type="Animation" id="Animation_1evml"]
+resource_name = "Caminar_Arriba"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [16, 17, 18, 19, 20]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 0, 1, 2, 1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Audios/Efectos/Caminar:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
+[sub_resource type="Animation" id="Animation_i6148"]
+resource_name = "Caminar_Derecha"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [11, 12, 13, 14, 15]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 0, 1, 2, 1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Audios/Efectos/Caminar:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
+[sub_resource type="Animation" id="Animation_6nn2y"]
+resource_name = "Caminar_Izquierda"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 0, 1, 2, 1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Audios/Efectos/Caminar:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
+[sub_resource type="Animation" id="Animation_qjikt"]
+resource_name = "Inactivo"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_fwito"]
+resource_name = "Invocar_Abajo"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [63, 64, 65, 66]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Terminar_Invocar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Audios/Efectos/Invocar:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_f1lqs"]
+resource_name = "Invocar_Arriba"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [67, 68, 69, 70]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Terminar_Invocar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Audios/Efectos/Invocar:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_igmwq"]
+resource_name = "Invocar_Derecha"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [59, 60, 61, 62]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Terminar_Invocar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Audios/Efectos/Invocar:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_i8bdl"]
+resource_name = "Invocar_Izquierda"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [58, 58]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sombra:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Terminar_Invocar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Audios/Efectos/Invocar:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Gradient" id="Gradient_djq57"]
+offsets = PackedFloat32Array(0.155914, 0.430108, 0.795699, 1)
+colors = PackedColorArray(0, 0.180392, 0.376471, 0.454902, 1, 0.768627, 0, 1, 1, 0.768627, 0, 1, 0.64144, 0.488703, 1.92523e-07, 0.486275)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_x1g1y"]
+gradient = SubResource("Gradient_djq57")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_esy58"]
+emission_shape = 5
+emission_point_count = 0
+particle_flag_disable_z = true
+gravity = Vector3(300, 120, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.1
+color_ramp = SubResource("GradientTexture1D_x1g1y")
+hue_variation_max = 0.02
+turbulence_enabled = true
+turbulence_noise_strength = 0.0
+turbulence_noise_scale = 0.2
+
+[sub_resource type="Animation" id="Animation_t474l"]
+resource_name = "Lanzar_Fuego"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [26, 27, 28, 29, 28, 27, 26]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Lanzar_Fuego:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.7, 1.2, 1.7, 2.2, 2.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(10, -7), Vector2(6, -5), Vector2(0, -4), Vector2(-7, -6), Vector2(0, -3), Vector2(6, -5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Lanzar_Fuego:process_material:gravity")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2, 0.7, 1.2, 1.7, 2.2, 2.7, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(300, 0, 0), Vector3(300, 300, 0), Vector3(0, 400, 0), Vector3(-400, 100, 0), Vector3(0, 400, 0), Vector3(300, 300, 0), Vector3(300, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Areas/Caja_Golpe_Fuego/CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6, 1.1, 1.6, 2.1, 2.6, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(42, -7), Vector2(29, 17), Vector2(0, 32), Vector2(-36, 17), Vector2(0, 32), Vector2(29, 17)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Areas/Caja_Golpe_Fuego/CollisionShape2D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.6, 1.1, 1.6, 2.1, 2.6, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [4.71239, 5.49779, 6.28319, 6.89405, 6.28319, 5.49779]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Lanzar_Fuego:process_material:orbit_velocity_max")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.1]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Lanzar_Fuego:process_material:orbit_velocity_min")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Lanzar_Fuego:process_material")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("ParticleProcessMaterial_esy58")]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Audios/Efectos/Lanzar_Fuego:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5vefa"]
+_data = {
+"Arrodillar": SubResource("Animation_5rrxu"),
+"Atacar1_Abajo": SubResource("Animation_u2u6u"),
+"Atacar1_Arriba": SubResource("Animation_a83iq"),
+"Atacar1_Derecha": SubResource("Animation_eiyqy"),
+"Atacar1_Izquierda": SubResource("Animation_e5xv1"),
+"Atacar2_Abajo": SubResource("Animation_6qxyj"),
+"Atacar2_Arriba": SubResource("Animation_2gt46"),
+"Atacar2_Derecha": SubResource("Animation_6esek"),
+"Atacar2_Izquierda": SubResource("Animation_ojwba"),
+"Caer_Abajo": SubResource("Animation_ec0yg"),
+"Caer_Arriba": SubResource("Animation_btgq7"),
+"Caer_Derecha": SubResource("Animation_t1xav"),
+"Caer_Izquierda": SubResource("Animation_0584e"),
+"Caminar_Abajo": SubResource("Animation_8xq1t"),
+"Caminar_Arriba": SubResource("Animation_1evml"),
+"Caminar_Derecha": SubResource("Animation_i6148"),
+"Caminar_Izquierda": SubResource("Animation_6nn2y"),
+"Inactivo": SubResource("Animation_qjikt"),
+"Invocar_Abajo": SubResource("Animation_fwito"),
+"Invocar_Arriba": SubResource("Animation_f1lqs"),
+"Invocar_Derecha": SubResource("Animation_igmwq"),
+"Invocar_Izquierda": SubResource("Animation_i8bdl"),
+"Lanzar_Fuego": SubResource("Animation_t474l")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4fesb"]
+animation = &"Atacar1_Izquierda"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ny6dn"]
+animation = &"Atacar1_Derecha"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6vlnd"]
+animation = &"Atacar1_Arriba"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qg8nq"]
+animation = &"Atacar1_Abajo"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_dvkv1"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_4fesb")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_ny6dn")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_6vlnd")
+blend_point_2/pos = Vector2(0, -1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_qg8nq")
+blend_point_3/pos = Vector2(0, 1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y67nv"]
+animation = &"Atacar2_Izquierda"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q2v8a"]
+animation = &"Atacar2_Derecha"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xm3yv"]
+animation = &"Atacar2_Abajo"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lfb8x"]
+animation = &"Atacar2_Arriba"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_nwwop"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_y67nv")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_q2v8a")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_xm3yv")
+blend_point_2/pos = Vector2(0, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_lfb8x")
+blend_point_3/pos = Vector2(0, -1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_txboe"]
+animation = &"Caer_Izquierda"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_shcyf"]
+animation = &"Caer_Derecha"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jvtqx"]
+animation = &"Caer_Abajo"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hvyr3"]
+animation = &"Caer_Arriba"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_de0jf"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_txboe")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_shcyf")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_jvtqx")
+blend_point_2/pos = Vector2(0, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_hvyr3")
+blend_point_3/pos = Vector2(0, -1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_758u7"]
+animation = &"Caminar_Izquierda"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ts0qs"]
+animation = &"Caminar_Arriba"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0ntsl"]
+animation = &"Caminar_Abajo"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qpg17"]
+animation = &"Caminar_Derecha"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_33wrt"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_758u7")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_ts0qs")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_0ntsl")
+blend_point_2/pos = Vector2(0, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_qpg17")
+blend_point_3/pos = Vector2(1, 0)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q2d4k"]
+animation = &"Inactivo"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ekquc"]
+animation = &"Invocar_Izquierda"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f8h74"]
+animation = &"Invocar_Derecha"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k5coy"]
+animation = &"Invocar_Abajo"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xuvpw"]
+animation = &"Invocar_Arriba"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_i2nqb"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_ekquc")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_f8h74")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_k5coy")
+blend_point_2/pos = Vector2(0, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_xuvpw")
+blend_point_3/pos = Vector2(0, -1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6e5gp"]
+animation = &"Lanzar_Fuego"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_8y6mi"]
+states/Atacar1/node = SubResource("AnimationNodeBlendSpace2D_dvkv1")
+states/Atacar1/position = Vector2(551, 156)
+states/Atacar2/node = SubResource("AnimationNodeBlendSpace2D_nwwop")
+states/Atacar2/position = Vector2(551, 213)
+states/Caer/node = SubResource("AnimationNodeBlendSpace2D_de0jf")
+states/Caer/position = Vector2(747, 100)
+states/Caminar/node = SubResource("AnimationNodeBlendSpace2D_33wrt")
+states/Caminar/position = Vector2(390, 100)
+states/Inactivo/node = SubResource("AnimationNodeAnimation_q2d4k")
+states/Inactivo/position = Vector2(265, 100)
+states/Invocar/node = SubResource("AnimationNodeBlendSpace2D_i2nqb")
+states/Invocar/position = Vector2(551, 282)
+states/Lanzar/node = SubResource("AnimationNodeAnimation_6e5gp")
+states/Lanzar/position = Vector2(551, 100)
+states/Start/position = Vector2(138, 100)
+graph_offset = Vector2(101, -28.807)
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_8rb3h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lbtds"]
+radius = 2.0
+height = 8.0
+
+[sub_resource type="Gradient" id="Gradient_xo52f"]
+offsets = PackedFloat32Array(0, 0.27957, 0.752688, 0.956989)
+colors = PackedColorArray(1, 0.705882, 0, 1, 1, 0.862745, 0, 1, 1, 0.862745, 0, 1, 1, 0.862745, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xvhgm"]
+gradient = SubResource("Gradient_xo52f")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y57m8"]
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 0.0
+emission_ring_radius = 1.5
+emission_ring_inner_radius = 0.0
+particle_flag_disable_z = true
+gravity = Vector3(0, -1000, 0)
+orbit_velocity_min = 100.0
+orbit_velocity_max = 100.0
+color_ramp = SubResource("GradientTexture1D_xvhgm")
+turbulence_enabled = true
+turbulence_noise_strength = 20.0
+turbulence_noise_scale = 10.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ue3ba"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fcpvt"]
+height = 76.7851
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7gmvp"]
+radius = 6.0
+height = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bpq5g"]
+radius = 19.0263
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g3omb"]
+radius = 430.68
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6s5px"]
+radius = 79.0063
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jfvf2"]
+radius = 25.0799
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ecjs5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_jn8jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ch706")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_n1wrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_14nq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_y53ji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qsl8h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxtub"]
+atlas = ExtResource("15_d7rjp")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2axhq"]
+atlas = ExtResource("15_d7rjp")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu7kv"]
+atlas = ExtResource("15_d7rjp")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blm6v"]
+atlas = ExtResource("15_d7rjp")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdui7"]
+atlas = ExtResource("15_d7rjp")
+region = Rect2(128, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s4lbe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxtub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2axhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eu7kv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blm6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdui7")
+}],
+"loop": true,
+"name": &"Animacion",
+"speed": 5.0
+}]
+
+[node name="Carontes" type="CharacterBody2D"]
+process_mode = 3
+collision_layer = 16
+collision_mask = 257
+script = ExtResource("1_lxuuy")
+Velocidad = 20
+
+[node name="Carontes" type="Sprite2D" parent="."]
+texture = ExtResource("1_jg8l6")
+hframes = 79
+frame = 55
+
+[node name="Sombra" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, 2)
+texture = ExtResource("3_n380n")
+hframes = 8
+frame = 1
+
+[node name="Caronte_Ani_Play" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Carontes")
+libraries = {
+"": SubResource("AnimationLibrary_5vefa")
+}
+
+[node name="Caronte_Tree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_8y6mi")
+anim_player = NodePath("../Caronte_Ani_Play")
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_8rb3h")
+parameters/Atacar1/blend_position = Vector2(0, 1)
+parameters/Atacar2/blend_position = Vector2(0, 1)
+parameters/Caer/blend_position = Vector2(1, 0)
+parameters/Caminar/blend_position = Vector2(0, 1)
+parameters/Invocar/blend_position = Vector2(0, 1)
+
+[node name="Caronte_Colision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 14)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_lbtds")
+
+[node name="Estadisticas" parent="." instance=ExtResource("4_ju776")]
+Vida_Maxima = 12.0
+
+[node name="Temporizadores" type="Timer" parent="."]
+
+[node name="Invocar" type="Timer" parent="Temporizadores"]
+wait_time = 12.0
+autostart = true
+
+[node name="Inherit" type="Timer" parent="Temporizadores"]
+
+[node name="Fuego" type="GPUParticles2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(14, -8)
+emitting = false
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_y57m8")
+lifetime = 0.2
+speed_scale = 0.1
+explosiveness = 0.5
+randomness = 1.0
+
+[node name="Lanzar_Fuego" type="GPUParticles2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+y_sort_enabled = true
+position = Vector2(8.4, -6.2)
+emitting = false
+amount = 4000
+process_material = SubResource("ParticleProcessMaterial_esy58")
+explosiveness = 0.06
+randomness = 1.0
+
+[node name="Areas" type="Area2D" parent="."]
+
+[node name="Caja_Golpe" parent="Areas" instance=ExtResource("2_ia12m")]
+visible = false
+collision_layer = 4
+Golpe = 1.0
+
+[node name="CollisionShape2D" parent="Areas/Caja_Golpe" index="0"]
+position = Vector2(-8, -12)
+shape = SubResource("CircleShape2D_ue3ba")
+disabled = true
+debug_color = Color(0.745098, 0.207843, 1, 0.419608)
+
+[node name="Caja_Golpe_Fuego" parent="Areas" instance=ExtResource("2_ia12m")]
+position = Vector2(8, -8)
+collision_layer = 4
+Golpe = 1.0
+
+[node name="CollisionShape2D" parent="Areas/Caja_Golpe_Fuego" index="0"]
+position = Vector2(16.8, 16.4)
+rotation = 5.65487
+shape = SubResource("CapsuleShape2D_fcpvt")
+debug_color = Color(0, 0.643137, 0.282353, 0.419608)
+
+[node name="Caja_Lesion" parent="Areas" instance=ExtResource("3_db6iv")]
+visible = false
+collision_layer = 16
+collision_mask = 8
+
+[node name="CollisionShape2D" parent="Areas/Caja_Lesion" index="0"]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_7gmvp")
+debug_color = Color(0.988235, 0, 0, 0.243137)
+
+[node name="Zona_Atacar" parent="Areas" instance=ExtResource("5_fnujb")]
+visible = false
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Areas/Zona_Atacar" index="0"]
+shape = SubResource("CircleShape2D_bpq5g")
+
+[node name="Zona_Detectar" parent="Areas" instance=ExtResource("5_fnujb")]
+visible = false
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Areas/Zona_Detectar" index="0"]
+shape = SubResource("CircleShape2D_g3omb")
+debug_color = Color(0, 0, 0, 0.254902)
+
+[node name="Zona_Lanzar_Fuego" parent="Areas" instance=ExtResource("5_fnujb")]
+visible = false
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Areas/Zona_Lanzar_Fuego" index="0"]
+shape = ExtResource("9_4hd21")
+
+[node name="Zona_Detectar_Musica" parent="Areas" instance=ExtResource("5_fnujb")]
+visible = false
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Areas/Zona_Detectar_Musica" index="0"]
+shape = SubResource("CircleShape2D_6s5px")
+
+[node name="Zona_Detectar_Rama_Dorada" parent="Areas" instance=ExtResource("5_fnujb")]
+visible = false
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Areas/Zona_Detectar_Rama_Dorada" index="0"]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_jfvf2")
+
+[node name="Rama_Dorada" type="AnimatedSprite2D" parent="."]
+visible = false
+light_mask = 2
+visibility_layer = 2
+position = Vector2(0, -16)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ecjs5")
+autoplay = "default"
+
+[node name="Pentagrama" type="AnimatedSprite2D" parent="."]
+visible = false
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-1, -18)
+sprite_frames = SubResource("SpriteFrames_s4lbe")
+animation = &"Animacion"
+autoplay = "Animacion"
+frame_progress = 0.461718
+
+[node name="Audios" type="AudioStreamPlayer" parent="."]
+
+[node name="Canciones" type="AudioStreamPlayer" parent="Audios"]
+
+[node name="Preludio" type="AudioStreamPlayer" parent="Audios/Canciones"]
+process_mode = 3
+stream = ExtResource("16_cp3iq")
+bus = &"Canciones"
+
+[node name="Efectos" type="AudioStreamPlayer" parent="Audios"]
+
+[node name="Lanzar_Fuego" type="AudioStreamPlayer" parent="Audios/Efectos"]
+stream = ExtResource("17_k8yrk")
+bus = &"Efectos"
+
+[node name="Caminar" type="AudioStreamPlayer" parent="Audios/Efectos"]
+stream = ExtResource("18_rqyfo")
+bus = &"Efectos"
+
+[node name="Invocar" type="AudioStreamPlayer" parent="Audios/Efectos"]
+stream = ExtResource("19_u8fh7")
+bus = &"Efectos"
+
+[node name="Caer" type="AudioStreamPlayer" parent="Audios/Efectos"]
+stream = ExtResource("20_cgkdv")
+bus = &"Efectos"
+
+[node name="Atacar" type="AudioStreamPlayer" parent="Audios/Efectos"]
+stream = ExtResource("21_ydiow")
+bus = &"Efectos"
+
+[connection signal="Sin_Vida" from="Estadisticas" to="." method="_on_estadisticas_sin_vida"]
+[connection signal="timeout" from="Temporizadores/Invocar" to="." method="_on_invocar_timeout"]
+[connection signal="timeout" from="Temporizadores/Inherit" to="." method="_on_inherit_timeout"]
+[connection signal="area_entered" from="Areas/Caja_Lesion" to="." method="_on_caja_lesion_area_entered"]
+
+[editable path="Areas/Caja_Golpe"]
+[editable path="Areas/Caja_Golpe_Fuego"]
+[editable path="Areas/Caja_Lesion"]
+[editable path="Areas/Zona_Atacar"]
+[editable path="Areas/Zona_Detectar"]
+[editable path="Areas/Zona_Lanzar_Fuego"]
+[editable path="Areas/Zona_Detectar_Musica"]
+[editable path="Areas/Zona_Detectar_Rama_Dorada"]

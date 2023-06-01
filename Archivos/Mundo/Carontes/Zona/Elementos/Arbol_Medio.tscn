@@ -1,0 +1,164 @@
+[gd_scene load_steps=14 format=3 uid="uid://co3wo2lru1wj8"]
+
+[ext_resource type="Texture2D" uid="uid://ds2x50u5xvohr" path="res://Archivos/Mundo/Carontes/Zona/Elementos/Arbol_Medio.png" id="1_p0p5e"]
+[ext_resource type="Script" path="res://Archivos/Mundo/Carontes/Zona/Elementos/Arbol_Medio.gd" id="1_p628a"]
+[ext_resource type="Texture2D" uid="uid://chtve1mahcopd" path="res://Archivos/Sombra/Sombra_Arboles_Sprite_Sheet.png" id="2_vbspq"]
+[ext_resource type="PackedScene" uid="uid://bjf855h26o70t" path="res://Archivos/Generales/Cajas_Colision/Zona_Detectar.tscn" id="3_cmddb"]
+[ext_resource type="PackedScene" uid="uid://dj1hjt21ra1gr" path="res://Archivos/Mundo/Carontes/Zona/Elementos/Antorcha.tscn" id="4_wfi4f"]
+[ext_resource type="PackedScene" uid="uid://dieu2w7b2qxlb" path="res://Archivos/Generales/Cajas_Colision/Caja_Lesion.tscn" id="6_4kwwd"]
+[ext_resource type="AudioStream" uid="uid://ci0wcd5vsmdg" path="res://Archivos/Musica/Efectos/Canciones/Aletheia.wav" id="7_xev4d"]
+
+[sub_resource type="Animation" id="Animation_kvnj4"]
+resource_name = "Arbol_Medio"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Arbol_Medio:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Arbol_Medio:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_l5rhj"]
+resource_name = "Desaparecer"
+length = 2.0
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Arbol_Medio:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Antorcha:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Arbol_Medio:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Antorcha:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tk5ay"]
+_data = {
+"Arbol_Medio": SubResource("Animation_kvnj4"),
+"Desaparecer": SubResource("Animation_l5rhj")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kq0oy"]
+radius = 3.0
+height = 10.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_85jbx"]
+radius = 25.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_od6mr"]
+size = Vector2(2.56423, 9.58799)
+
+[node name="Arbol_Medio" type="StaticBody2D"]
+y_sort_enabled = true
+collision_mask = 0
+script = ExtResource("1_p628a")
+
+[node name="Arbol_Medio" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_p0p5e")
+
+[node name="Sombra" type="Sprite2D" parent="Arbol_Medio"]
+z_index = -1
+position = Vector2(1.47323, 0.846762)
+texture = ExtResource("2_vbspq")
+hframes = 4
+frame = 3
+
+[node name="Arbol_Medio_Ani_Play" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tk5ay")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_kq0oy")
+
+[node name="Zona_Detectar" parent="." instance=ExtResource("3_cmddb")]
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Zona_Detectar" index="0"]
+position = Vector2(0, 12)
+shape = SubResource("CircleShape2D_85jbx")
+debug_color = Color(0, 0, 0, 0.756863)
+
+[node name="Antorcha" parent="." instance=ExtResource("4_wfi4f")]
+
+[node name="Caja_Lesion" parent="." instance=ExtResource("6_4kwwd")]
+collision_mask = 8
+
+[node name="CollisionShape2D" parent="Caja_Lesion" index="0"]
+position = Vector2(0.0231075, 3.90881)
+shape = SubResource("RectangleShape2D_od6mr")
+debug_color = Color(0.956863, 0, 0.52549, 0.419608)
+
+[node name="Aletheia" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("7_xev4d")
+volume_db = 5.0
+bus = &"Canciones"
+
+[connection signal="area_entered" from="Caja_Lesion" to="." method="_on_caja_lesion_area_entered"]
+
+[editable path="Zona_Detectar"]
+[editable path="Antorcha"]
+[editable path="Antorcha/Caja_Lesion"]
+[editable path="Antorcha/Zona_Detectar"]
+[editable path="Caja_Lesion"]

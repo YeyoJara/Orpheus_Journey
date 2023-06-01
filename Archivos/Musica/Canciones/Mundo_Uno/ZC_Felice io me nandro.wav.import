@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dux5ua8x6eq2u"
+path="res://.godot/imported/ZC_Felice io me nandro.wav-9a35483b5881b1b7bf6428ff11e601b0.sample"
+
+[deps]
+
+source_file="res://Archivos/Musica/Canciones/Mundo_Uno/ZC_Felice io me nandro.wav"
+dest_files=["res://.godot/imported/ZC_Felice io me nandro.wav-9a35483b5881b1b7bf6428ff11e601b0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

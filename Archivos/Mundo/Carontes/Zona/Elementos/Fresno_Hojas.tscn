@@ -1,0 +1,132 @@
+[gd_scene load_steps=17 format=3 uid="uid://c7pkga4t2t5tg"]
+
+[ext_resource type="Texture2D" uid="uid://duja1e617jeag" path="res://Archivos/Mundo/Carontes/Zona/Elementos/Arbol_Fresno.png" id="1_kdwbl"]
+[ext_resource type="Script" path="res://Archivos/Mundo/Carontes/Zona/Elementos/Fresno_Hojas.gd" id="2_ct0pt"]
+[ext_resource type="Texture2D" uid="uid://chtve1mahcopd" path="res://Archivos/Sombra/Sombra_Arboles_Sprite_Sheet.png" id="2_r7c4h"]
+[ext_resource type="Texture2D" uid="uid://d3w7d6setmpu6" path="res://Archivos/Mundo/Carontes/Zona/Elementos/Hojas_Otono_Cayendo_Sprite_Sheet.png" id="4_tt6pv"]
+[ext_resource type="AudioStream" uid="uid://bmecjue0iv8fh" path="res://Archivos/Musica/Efectos/Hojas_Cayendo.wav" id="5_hfx2a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ird6o"]
+atlas = ExtResource("4_tt6pv")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isfj5"]
+atlas = ExtResource("4_tt6pv")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yiqo1"]
+atlas = ExtResource("4_tt6pv")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2a6k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ird6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isfj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yiqo1")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"Animacion",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fhf2"]
+atlas = ExtResource("2_r7c4h")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwtxp"]
+atlas = ExtResource("2_r7c4h")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70aqm"]
+atlas = ExtResource("2_r7c4h")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cl88d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fhf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwtxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70aqm")
+}],
+"loop": true,
+"name": &"Sombra",
+"speed": 2.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_76o2u"]
+radius = 3.0
+height = 10.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i5ho4"]
+radius = 0.799999
+height = 16.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dbygv"]
+radius = 0.8
+height = 17.6
+
+[node name="Fresno_Hojas" type="Sprite2D"]
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_kdwbl")
+offset = Vector2(0, -16)
+script = ExtResource("2_ct0pt")
+
+[node name="Hojas_Otono_Cayendo" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h2a6k")
+animation = &"Animacion"
+offset = Vector2(0, -25)
+
+[node name="Sombra" type="AnimatedSprite2D" parent="."]
+z_index = -1
+position = Vector2(1, -15)
+sprite_frames = SubResource("SpriteFrames_cl88d")
+animation = &"Sombra"
+autoplay = "Sombra"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 11)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_76o2u")
+
+[node name="Efecto" type="Area2D" parent="."]
+
+[node name="Librear_Hojas_Derecha" type="Area2D" parent="Efecto"]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Efecto/Librear_Hojas_Derecha"]
+position = Vector2(16, -4.8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_i5ho4")
+
+[node name="Liberar_Hojas_Izquierda" type="Area2D" parent="Efecto"]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Efecto/Liberar_Hojas_Izquierda"]
+position = Vector2(-10.4, -4.8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_dbygv")
+
+[node name="Hojas_Cayendo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_hfx2a")
+bus = &"Efectos"
+
+[connection signal="area_entered" from="Efecto/Librear_Hojas_Derecha" to="." method="_on_librear_hojas_derecha_area_entered"]
+[connection signal="area_entered" from="Efecto/Liberar_Hojas_Izquierda" to="." method="_on_liberar_hojas_izquierda_area_entered"]

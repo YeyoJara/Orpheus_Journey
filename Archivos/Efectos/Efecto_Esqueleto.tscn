@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://c17soypfp0jry"]
+
+[ext_resource type="Texture2D" uid="uid://ce1fn2hx6o7rw" path="res://Archivos/Efectos/Efecto_Esqueleto_Sprite_Sheet.png" id="1_rpjt0"]
+[ext_resource type="Script" path="res://Archivos/Efectos/Efectos.gd" id="2_prj8r"]
+[ext_resource type="AudioStream" uid="uid://cvdoi3g1dby0i" path="res://Archivos/Musica/Efectos/Huesos_Crack.wav" id="3_5u5fg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmwy0"]
+atlas = ExtResource("1_rpjt0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgxk5"]
+atlas = ExtResource("1_rpjt0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0cc5"]
+atlas = ExtResource("1_rpjt0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iv8x1"]
+atlas = ExtResource("1_rpjt0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xev8i"]
+atlas = ExtResource("1_rpjt0")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jj2w7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmwy0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgxk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0cc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iv8x1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xev8i")
+}],
+"loop": false,
+"name": &"Animacion",
+"speed": 8.0
+}]
+
+[node name="Efecto_Esqueleto" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_jj2w7")
+animation = &"Animacion"
+frame = 4
+frame_progress = 1.0
+script = ExtResource("2_prj8r")
+
+[node name="Crack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5u5fg")
+autoplay = true
+bus = &"Efectos"
